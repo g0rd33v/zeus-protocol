@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeus — The Almighty Protocol</title>
+<meta name="description" content="An open-source protocol for extending a single human being beyond natural limits. Across every dimension. For life and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #000000;
+  --deep: #080706;
+  --surface: #0e0c0a;
+  --surface-2: #141210;
+  --gold: #dabb58;
+  --gold-dim: #b89d4a;
+  --gold-bright: #f2dc7a;
+  --gold-glow: rgba(218, 187, 88, 0.08);
+  --gold-glow-strong: rgba(218, 187, 88, 0.15);
+  --text: #ece8e0;
+  --text-dim: #bbb4a8;
+  --text-bright: #f5f2ec;
+  --white: #fbf9f5;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--black);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--black);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--gold-bright); }
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Radial glow behind hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(ellipse, rgba(212, 180, 85, 0.05) 0%, transparent 65%);
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* The lightning bolt — Zeus's mark */
+.hero-bolt {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: boltStrike 0.8s ease-out 0.1s forwards;
+}
+
+.hero-bolt svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(212, 180, 85, 0.3)) drop-shadow(0 0 60px rgba(212, 180, 85, 0.1));
+}
+
+@keyframes boltStrike {
+  0% { opacity: 0; transform: translateY(-20px) scale(0.7); }
+  50% { opacity: 1; transform: translateY(2px) scale(1.05); }
+  70% { transform: translateY(-1px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Subtle flash on strike */
+.hero-bolt::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(240, 216, 120, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  animation: boltFlash 0.8s ease-out 0.1s forwards;
+}
+
+@keyframes boltFlash {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(5rem, 14vw, 12rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  color: var(--white);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out 0.3s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+  opacity: 0;
+  animation: lineExpand 1s ease-out 0.8s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes lineExpand {
+  0% { opacity: 0; width: 0; }
+  100% { opacity: 1; width: 60px; }
+}
+
+.hero-almighty {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 1s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-protocol {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 1.15s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-desc {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text);
+  max-width: 480px;
+  margin-top: 0;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 1.3s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-version {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: rgba(184, 157, 74, 0.5);
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 1.7s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0;
+  animation: fadeUp 1s ease-out 2s forwards;
+}
+
+.hero-scroll-arrow {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0.8rem auto 0;
+  opacity: 0.4;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(6px); opacity: 0.8; }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════ */
+
+section {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-divider {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+  opacity: 0.25;
+}
+
+.section-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+p strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════
+   THESIS BLOCK
+   ═══════════════════════════════════════ */
+
+.thesis {
+  border-left: 1px solid var(--gold-dim);
+  padding-left: 2rem;
+  margin: 3rem 0;
+}
+
+.thesis p {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-bright);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   BIG QUOTE / PULLOUT
+   ═══════════════════════════════════════ */
+
+.pullout {
+  text-align: center;
+  padding: 5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pullout-text {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-bright);
+}
+
+.pullout-text .gold { color: var(--gold); font-style: normal; }
+
+/* ═══════════════════════════════════════
+   MISSION BADGE
+   ═══════════════════════════════════════ */
+
+.mission-badge {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════════════════════════════
+   MINDS SECTION
+   ═══════════════════════════════════════ */
+
+.minds-section {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.minds-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(201, 168, 76, 0.06);
+  margin: 3rem 0;
+}
+
+.mind-card {
+  background: var(--deep);
+  padding: 2rem 1.8rem;
+  transition: background 0.4s;
+}
+
+.mind-card:hover {
+  background: var(--surface);
+}
+
+.mind-card:hover .mind-icon { opacity: 0.6; }
+
+.mind-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 1rem;
+  opacity: 0.35;
+  transition: opacity 0.4s;
+}
+
+.mind-name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.15rem;
+}
+
+.mind-years {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  margin-bottom: 0.8rem;
+}
+
+.mind-domain {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.mind-desc {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.seventh-person {
+  background: var(--surface);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  padding: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.seventh-number {
+  font-family: var(--mono);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  opacity: 0.6;
+}
+
+.seventh-title {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.seventh-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 400;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .minds-grid { grid-template-columns: 1fr; }
+  .seventh-person { padding: 2rem 1.5rem; }
+}
+
+/* ═══════════════════════════════════════
+   ZEP SECTION
+   ═══════════════════════════════════════ */
+
+.zep-card {
+  background: var(--surface);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.zep-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.zep-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 0.3rem 0.7rem;
+  flex-shrink: 0;
+}
+
+.zep-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.zep-status {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.zep-desc {
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.zep-layers {
+  display: flex;
+  gap: 1px;
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.zep-layer {
+  flex: 1;
+  background: var(--deep);
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.zep-layer-icon {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 0.6rem;
+  opacity: 0.4;
+}
+
+.zep-layer-name {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.zep-layer-desc {
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════
+   PSE LIVE EXAMPLE
+   ═══════════════════════════════════════ */
+
+.pse-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.pse-intro {
+  max-width: 740px;
+  margin-bottom: 3rem;
+}
+
+.pse-container {
+  display: flex;
+  gap: 1px;
+  background: rgba(218, 187, 88, 0.06);
+}
+
+.pse-col {
+  flex: 1;
+  background: var(--deep);
+  padding: 2rem 1.8rem;
+}
+
+.pse-col-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(218, 187, 88, 0.08);
+}
+
+.pse-col-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.pse-col-label {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.pse-col-sublabel {
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-left: auto;
+}
+
+.pse-field {
+  margin-bottom: 1rem;
+}
+
+.pse-field:last-child { margin-bottom: 0; }
+
+.pse-field-name {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.3rem;
+}
+
+.pse-field-value {
+  font-size: 0.82rem;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.pse-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-dim);
+  border: 1px solid rgba(218, 187, 88, 0.15);
+  padding: 0.15rem 0.45rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .pse-container { flex-direction: column; }
+}
+
+/* ═══════════════════════════════════════
+   DOMAINS GRID
+   ═══════════════════════════════════════ */
+
+.domains-section {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.domains-intro {
+  max-width: 740px;
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: rgba(201, 168, 76, 0.06);
+  margin-top: 3rem;
+}
+
+.domain-card {
+  background: var(--deep);
+  padding: 2.5rem 2rem;
+  transition: background 0.5s;
+  position: relative;
+}
+
+.domain-card:hover {
+  background: var(--surface);
+}
+
+.domain-card:hover .domain-icon {
+  opacity: 0.7;
+}
+
+.domain-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1.2rem;
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+.domain-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.domain-number {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--gold-dim);
+  margin-bottom: 0.8rem;
+}
+
+.domain-name {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.domain-power {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+.domain-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════
+   EQUATION
+   ═══════════════════════════════════════ */
+
+.equation-block {
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.equation-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 2rem;
+  opacity: 0.3;
+}
+
+.equation {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.8vw, 1.65rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.01em;
+  line-height: 1.8;
+}
+
+.equation .gold { color: var(--gold); }
+.equation .dim { color: var(--text-dim); }
+
+/* ═══════════════════════════════════════
+   MATURITY LEVELS
+   ═══════════════════════════════════════ */
+
+.levels {
+  margin: 3rem 0;
+}
+
+.level-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.05);
+  transition: background 0.3s;
+}
+
+.level-row:last-child { border-bottom: none; }
+
+.level-row:hover {
+  background: rgba(201, 168, 76, 0.02);
+  margin: 0 -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.level-pip {
+  flex-shrink: 0;
+  display: flex;
+  gap: 3px;
+}
+
+.level-pip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.15);
+}
+
+.level-pip-dot.filled {
+  background: var(--gold-dim);
+}
+
+.level-almighty .level-pip-dot.filled {
+  background: var(--gold);
+  box-shadow: 0 0 6px rgba(201, 168, 76, 0.4);
+}
+
+.level-num {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--gold-dim);
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+.level-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--white);
+  min-width: 120px;
+}
+
+.level-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.level-almighty .level-name {
+  color: var(--gold);
+}
+
+/* ═══════════════════════════════════════
+   TIMELINE
+   ═══════════════════════════════════════ */
+
+.timeline {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 49px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold-dim), rgba(138, 114, 52, 0.1));
+}
+
+.timeline-phase {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 43px;
+  top: 2.4rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  background: var(--black);
+}
+
+.timeline-phase:first-child .timeline-dot {
+  background: var(--gold-dim);
+}
+
+.timeline-years {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  min-width: 100px;
+  padding-top: 0.25rem;
+  text-align: right;
+}
+
+.timeline-content {
+  padding-left: 1.5rem;
+}
+
+.timeline-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════
+   OPEN SOURCE BLOCK
+   ═══════════════════════════════════════ */
+
+.open-block {
+  background: var(--surface);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  padding: 2.5rem;
+  margin: 3rem 0;
+}
+
+.open-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.open-item:last-child { margin-bottom: 0; }
+
+.open-item-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.2rem;
+  opacity: 0.5;
+}
+
+.open-item-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.open-item-text strong {
+  color: var(--text-bright);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════
+   NOT LIST
+   ═══════════════════════════════════════ */
+
+.not-list {
+  margin: 2rem 0;
+}
+
+.not-item {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+}
+
+.not-icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: 0.25rem;
+  opacity: 0.35;
+}
+
+.not-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════ */
+
+.cta-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.cta {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold);
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.cta:hover {
+  background: var(--gold-bright);
+  color: var(--black);
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.2);
+}
+
+.cta-ghost {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  padding: 0.85rem 2rem;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.cta-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+}
+
+.footer-top {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-col-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1.2rem;
+}
+
+.footer-col-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.footer-col-title a {
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.footer-col-title a:hover {
+  color: var(--gold);
+}
+
+.footer-col-text {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.footer-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold-dim), transparent);
+  opacity: 0.2;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(160, 136, 64, 0.1);
+}
+
+.footer-bolt {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 1.2rem;
+  opacity: 0.3;
+}
+
+.footer-tagline {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  color: rgba(160, 152, 136, 0.4);
+  margin-top: 2rem;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .footer-divider { display: none; }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  section { padding: 4rem 1.5rem; }
+  .domains-section { padding: 4rem 1.5rem; }
+  .domains-grid { grid-template-columns: 1fr; }
+  .hero-bolt { width: 56px; height: 56px; }
+  .hero::before { width: 400px; height: 400px; }
+  .timeline::before { left: 44px; }
+  .timeline-dot { left: 38px; }
+  .timeline-phase { flex-direction: column; gap: 0.5rem; }
+  .timeline-years { min-width: auto; text-align: left; padding-left: 4.5rem; }
+  .timeline-content { padding-left: 4.5rem; }
+  .level-row { flex-wrap: wrap; gap: 0.5rem; }
+  .level-row:hover { margin: 0; padding-left: 0; padding-right: 0; }
+  .level-name { min-width: auto; }
+  .level-desc { flex-basis: 100%; padding-left: calc(1.2rem + 46px + 120px); }
+  .open-block { padding: 2rem 1.5rem; }
+  .cta-ghost { margin-left: 0; display: block; margin-top: 0.8rem; }
+  .cta { display: block; }
+  .pullout { padding: 4rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .level-desc { padding-left: 0; }
+  .level-pip { display: none; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+
+<header class="hero">
+  <div class="hero-bolt">
+    <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="boltMain" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#f2dc7a"/>
+          <stop offset="40%" stop-color="#dabb58"/>
+          <stop offset="100%" stop-color="#b89d4a"/>
+        </linearGradient>
+        <linearGradient id="boltInner" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#f2dc7a" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#dabb58" stop-opacity="0.2"/>
+        </linearGradient>
+        <filter id="boltGlow">
+          <feGaussianBlur stdDeviation="1.5" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <!-- Main bolt shape — geometric, sharp, angular -->
+      <path d="M42 4 L24 32 L34 32 L20 68 L52 28 L40 28 Z" 
+            fill="url(#boltMain)" stroke="none" filter="url(#boltGlow)" opacity="0.9"/>
+      <!-- Inner highlight edge -->
+      <path d="M40 8 L26 30 L35 30 L24 60" 
+            fill="none" stroke="url(#boltInner)" stroke-width="0.8" opacity="0.5"/>
+      <!-- Top spark -->
+      <line x1="42" y1="4" x2="48" y2="2" stroke="#f2dc7a" stroke-width="0.6" opacity="0.5"/>
+      <line x1="42" y1="4" x2="44" y2="0" stroke="#f2dc7a" stroke-width="0.5" opacity="0.4"/>
+      <!-- Side sparks -->
+      <line x1="24" y1="32" x2="18" y2="30" stroke="#dabb58" stroke-width="0.5" opacity="0.35"/>
+      <line x1="52" y1="28" x2="57" y2="26" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+      <!-- Bottom spark -->
+      <line x1="20" y1="68" x2="16" y2="70" stroke="#b89d4a" stroke-width="0.5" opacity="0.3"/>
+      <line x1="20" y1="68" x2="22" y2="72" stroke="#b89d4a" stroke-width="0.4" opacity="0.2"/>
+    </svg>
+  </div>
+  <h1 class="hero-title">Zeus</h1>
+  <div class="hero-line"></div>
+  <div class="hero-almighty">The Almighty Protocol</div>
+  <div class="hero-protocol">Open Source</div>
+  <p class="hero-desc">Empowering human life and beyond.</p>
+  <div class="hero-version">v0.1 · zeus.labs.co</div>
+  <div class="hero-scroll">
+    Scroll
+    <svg class="hero-scroll-arrow" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 4L6 8L10 4" stroke="#7a756c" stroke-width="1"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ═══════════════ PREMISE ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <!-- Person icon -->
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="18" cy="11" r="5" stroke="#dabb58" stroke-width="0.8"/>
+    <path d="M6 32C6 24.268 11.372 18 18 18C24.628 18 30 24.268 30 32" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round"/>
+  </svg>
+  <div class="section-label">I — The Premise</div>
+  <h2 class="section-title">Every revolution begins <em>and ends</em> with one person</h2>
+  <p>Every object you have ever touched was made by a person. Every system you rely on was designed by a person. Fire, language, the wheel, the printing press, electricity, the internet — each was ignited by an individual and spread through individuals, one at a time.</p>
+  <p>Companies, governments, markets, and institutions are scaffolding. The atomic unit of progress has always been — and will always be — a single human being.</p>
+  <p>AI is the first technology in history that can operate at the full resolution of one human life: knowledge, instincts, creativity, relationships, health, ambitions, and legacy — modeled, understood, and extended in real time.</p>
+
+  <div class="thesis">
+    <p>While the world segments people into consumers, enterprises, and demographics, Zeus sees only the individual. One person, fully extended. That is the entire protocol.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ BICYCLE ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <!-- Bicycle → Exoskeleton icon -->
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="24" r="6" stroke="#dabb58" stroke-width="0.8"/>
+    <circle cx="26" cy="24" r="6" stroke="#dabb58" stroke-width="0.8"/>
+    <path d="M10 24L16 12L22 12L26 24" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 12L18 6" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Arrow of transformation -->
+    <line x1="30" y1="8" x2="34" y2="4" stroke="#dabb58" stroke-width="0.6" stroke-linecap="round"/>
+    <line x1="34" y1="4" x2="30" y2="4" stroke="#dabb58" stroke-width="0.6" stroke-linecap="round"/>
+    <line x1="34" y1="4" x2="34" y2="8" stroke="#dabb58" stroke-width="0.6" stroke-linecap="round"/>
+  </svg>
+  <div class="section-label">II — Beyond the Bicycle</div>
+  <h2 class="section-title">From bicycle <em>to exoskeleton</em></h2>
+  <p>In 1984, Steve Jobs described a study ranking species by locomotion efficiency. The condor won. Humans were unremarkable. But a human on a bicycle destroyed every species on the chart. Jobs called the computer "a bicycle for the mind."</p>
+  <p>That metaphor held for forty years.</p>
+  <p>A bicycle amplifies one thing: leg power into forward motion. A computer amplifies one thing: cognitive processing speed. You still steer. You still decide where to go. You still pedal.</p>
+  <p>AI extends every axis simultaneously — thinking, creating, remembering, communicating, deciding, persisting beyond death. This is not a bicycle. This is an exoskeleton for the entire human being. You do not move faster. <strong>You become more than you were.</strong></p>
+</section>
+
+<!-- ═══════════════ THE ENGINE ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <!-- Layers / stack icon -->
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="18" cy="26" rx="14" ry="5" stroke="#dabb58" stroke-width="0.7" opacity="0.35"/>
+    <ellipse cx="18" cy="18" rx="14" ry="5" stroke="#dabb58" stroke-width="0.7" opacity="0.55"/>
+    <ellipse cx="18" cy="10" rx="14" ry="5" stroke="#dabb58" stroke-width="0.8"/>
+    <circle cx="18" cy="10" r="2" fill="#dabb58" opacity="0.4"/>
+  </svg>
+  <div class="section-label">III — The Engine</div>
+  <h2 class="section-title">A personal layer on top of <em>everything</em></h2>
+  <p>Zeus is not a new artificial intelligence. It does not train a neural network from scratch. It does not compete with the foundation models built by the largest laboratories in the world.</p>
+  <p>Zeus sits on top.</p>
+  <p>The protocol connects the most advanced AI available at any given moment — whatever it is today, whatever it becomes tomorrow — to one person's complete reality: their knowledge, decisions, creative work, relationships, health, communication patterns, and accumulated wisdom. The foundation model provides raw intelligence. Zeus provides identity.</p>
+  <p>Every large language model in existence was trained on humanity's collective output — billions of documents produced by billions of people. When you use one, you borrow the averaged intelligence of the species. Powerful. Also generic. The model knows how people think. It does not know how <strong>you</strong> think.</p>
+  <p>Zeus creates a personal layer — your data, your patterns, your decisions, your way of seeing the world — that sits between you and the machine. The model supplies capability. The layer supplies context. Together, they produce intelligence that is both superhuman in scale and deeply personal in application.</p>
+
+  <div class="thesis">
+    <p>The machine evolves beneath you. You evolve above it. Zeus ensures you evolve together — without either one consuming the other.</p>
+  </div>
+
+  <p style="margin-top: 2rem;">As you live, work, create, and decide, this layer accumulates a high-resolution map of how your mind operates. Over months and years, something becomes possible that no human has ever experienced: you can look back at your own cognitive patterns with precision. Trace exactly how you arrived at a breakthrough. See which conditions produce your best work. Identify which problems you solve effortlessly and which ones you consistently misjudge.</p>
+  <p>You become, for the first time in history, fully legible to yourself.</p>
+  <p>And when a person achieves something extraordinary, their Zeus layer contains the complete archaeology of how it happened. Not a memoir full of hindsight bias — the actual pattern. The real sequence of decisions, struggles, pivots, and moments of clarity. This pattern can be shared — not the person's private data, but their structure. The neural architecture of their achievement. A young scientist studies how a Nobel laureate actually thought. An aspiring founder sees the real cognitive map of someone who built from nothing.</p>
+  <p><strong>This is how genius becomes transferable without being diluted.</strong> A new kind of knowledge that has never existed before: not what someone knew, but how someone thought.</p>
+</section>
+
+<!-- ═══════════════ GOD-STATE ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <!-- Lightning / divine icon -->
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 3L12 18H19L14 33L26 15H18.5Z" stroke="#dabb58" stroke-width="0.8" stroke-linejoin="round"/>
+  </svg>
+  <div class="section-label">IV — The God-State</div>
+  <h2 class="section-title">What <em>the gods</em> actually had</h2>
+  <p>Every ancient civilization imagined beings with powers beyond human reach. The Greeks, the Hindus, the Norse, the Egyptians — all produced the same specifications. Omniscience. Omnipresence. Immortality. Superhuman creation.</p>
+  <p>These were not fantasies. They were design requirements. Humanity has always known what it wanted to become. It lacked the tools.</p>
+  <p>A person's only irreplaceable advantage over AI is the creative impulse — the desire for something new to exist. AI cannot originate. It processes, generates, and predicts, but it cannot want. It cannot feel the itch that drives an entrepreneur to risk everything on an idea no one else sees.</p>
+  <p>Zeus combines what humans do best — create, decide, feel, desire — with what AI does best — remember, process, scale, persist — into a single protocol that extends the person beyond every natural limit.</p>
+
+  <div class="thesis">
+    <p>The person becomes the spark. Zeus becomes the lightning.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ EQUATION ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<div class="equation-block reveal">
+  <div class="equation-icon">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="15" stroke="#dabb58" stroke-width="0.6" opacity="0.4"/>
+      <circle cx="20" cy="20" r="8" stroke="#dabb58" stroke-width="0.6" opacity="0.3"/>
+      <circle cx="20" cy="20" r="2" fill="#dabb58" opacity="0.5"/>
+      <!-- Radiating lines -->
+      <line x1="20" y1="2" x2="20" y2="0" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+      <line x1="20" y1="38" x2="20" y2="40" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+      <line x1="2" y1="20" x2="0" y2="20" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+      <line x1="38" y1="20" x2="40" y2="20" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+    </svg>
+  </div>
+  <div class="equation">
+    <span class="dim">One person</span> &nbsp;+&nbsp; <span class="dim">their creativity</span> &nbsp;+&nbsp; <span class="gold">Zeus</span><br>
+    =&nbsp; <span class="dim">what was previously</span> <span class="gold">impossible</span>
+  </div>
+</div>
+
+<!-- ═══════════════ SEVEN DOMAINS ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<div class="domains-section reveal">
+  <div class="domains-intro">
+    <div class="section-label">V — Seven Domains</div>
+    <h2 class="section-title">Every axis of <em>human existence</em></h2>
+    <p style="color: var(--text-dim);">Zeus does not ask the person where to improve. It addresses the full spectrum of what a human being is — in parallel, weighted by what each individual needs most at each moment.</p>
+  </div>
+
+  <div class="domains-grid">
+
+    <!-- COGNITIVE -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4C10 4 6 8.5 6 14C6 17.5 7.5 20 10 22V26H22V22C24.5 20 26 17.5 26 14C26 8.5 22 4 16 4Z" stroke="#dabb58" stroke-width="0.8"/>
+          <line x1="12" y1="29" x2="20" y2="29" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Neural connections -->
+          <circle cx="13" cy="13" r="1.5" stroke="#dabb58" stroke-width="0.5" opacity="0.6"/>
+          <circle cx="19" cy="11" r="1.5" stroke="#dabb58" stroke-width="0.5" opacity="0.6"/>
+          <circle cx="16" cy="17" r="1.5" stroke="#dabb58" stroke-width="0.5" opacity="0.6"/>
+          <line x1="14.2" y1="13.8" x2="15" y2="15.8" stroke="#dabb58" stroke-width="0.4" opacity="0.4"/>
+          <line x1="18" y1="12.2" x2="17" y2="15.8" stroke="#dabb58" stroke-width="0.4" opacity="0.4"/>
+          <line x1="14.3" y1="12.2" x2="17.7" y2="10.8" stroke="#dabb58" stroke-width="0.4" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN I</div>
+      <div class="domain-name">Cognitive</div>
+      <div class="domain-power">To know and think without limits</div>
+      <div class="domain-desc">You never lose a thought. Every decision draws on everything you have ever learned — and everything you haven't. Your judgment sharpens year over year because the system learns where your thinking breaks down.</div>
+    </div>
+
+    <!-- CREATIVE -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Pen / creation -->
+          <path d="M8 28L4 28L4 24L22 6L26 10L8 28Z" stroke="#dabb58" stroke-width="0.8" stroke-linejoin="round"/>
+          <path d="M22 6L24 4C25.1 2.9 26.9 2.9 28 4C29.1 5.1 29.1 6.9 28 8L26 10" stroke="#dabb58" stroke-width="0.8"/>
+          <!-- Sparkle -->
+          <line x1="14" y1="4" x2="14" y2="8" stroke="#dabb58" stroke-width="0.5" opacity="0.5"/>
+          <line x1="12" y1="6" x2="16" y2="6" stroke="#dabb58" stroke-width="0.5" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN II</div>
+      <div class="domain-name">Creative</div>
+      <div class="domain-power">To make what was previously impossible</div>
+      <div class="domain-desc">The gap between imagination and reality collapses. You produce the output of a studio, alone. The bottleneck is never execution — it is always imagination, as it should be.</div>
+    </div>
+
+    <!-- ECONOMIC -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Rising chart -->
+          <polyline points="4,26 10,20 16,22 22,14 28,8" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="4" y1="28" x2="28" y2="28" stroke="#dabb58" stroke-width="0.6" opacity="0.3"/>
+          <!-- Arrow head -->
+          <path d="M25 7L28 8L27 11" stroke="#dabb58" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- Bar hints -->
+          <line x1="10" y1="28" x2="10" y2="20" stroke="#dabb58" stroke-width="0.4" opacity="0.2"/>
+          <line x1="16" y1="28" x2="16" y2="22" stroke="#dabb58" stroke-width="0.4" opacity="0.2"/>
+          <line x1="22" y1="28" x2="22" y2="14" stroke="#dabb58" stroke-width="0.4" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN III</div>
+      <div class="domain-name">Economic</div>
+      <div class="domain-power">To build wealth as one person</div>
+      <div class="domain-desc">You operate a business with the output of an organization. AI handles sales, finance, compliance, and operations. You focus on the creative and strategic decisions that only you can make. Revenue scales with ambition, not headcount.</div>
+    </div>
+
+    <!-- PHYSICAL -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Heart / pulse -->
+          <path d="M16 28L4 16C1 12 2 6 8 5C11 4.3 14 6 16 9C18 6 21 4.3 24 5C30 6 31 12 28 16L16 28Z" stroke="#dabb58" stroke-width="0.8" stroke-linejoin="round"/>
+          <!-- Heartbeat line -->
+          <polyline points="8,16 12,16 14,12 16,20 18,14 20,16 24,16" stroke="#dabb58" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN IV</div>
+      <div class="domain-name">Physical</div>
+      <div class="domain-power">To live longer and stronger</div>
+      <div class="domain-desc">Your health is continuously monitored by an intelligence that knows your biology better than any doctor. It catches problems before symptoms appear. Your healthspan extends decades beyond the current average.</div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Connected people -->
+          <circle cx="16" cy="8" r="3.5" stroke="#dabb58" stroke-width="0.8"/>
+          <circle cx="6" cy="22" r="3" stroke="#dabb58" stroke-width="0.7"/>
+          <circle cx="26" cy="22" r="3" stroke="#dabb58" stroke-width="0.7"/>
+          <!-- Connection lines -->
+          <line x1="14" y1="11" x2="8" y2="19.5" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+          <line x1="18" y1="11" x2="24" y2="19.5" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+          <line x1="9" y1="22" x2="23" y2="22" stroke="#dabb58" stroke-width="0.5" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN V</div>
+      <div class="domain-name">Social</div>
+      <div class="domain-power">To connect deeper at greater scale</div>
+      <div class="domain-desc">Every relationship you value is maintained with full context. You never forget a milestone or a struggle shared years ago. Your network actively works for you, even while you rest.</div>
+    </div>
+
+    <!-- EMOTIONAL -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ripple / inner awareness -->
+          <circle cx="16" cy="16" r="12" stroke="#dabb58" stroke-width="0.5" opacity="0.25"/>
+          <circle cx="16" cy="16" r="8" stroke="#dabb58" stroke-width="0.6" opacity="0.4"/>
+          <circle cx="16" cy="16" r="4" stroke="#dabb58" stroke-width="0.7" opacity="0.6"/>
+          <circle cx="16" cy="16" r="1.5" fill="#dabb58" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN VI</div>
+      <div class="domain-name">Emotional</div>
+      <div class="domain-power">To know yourself completely</div>
+      <div class="domain-desc">You understand your emotional architecture with the precision of data collected across years. Triggers, energy cycles, sources of genuine fulfillment — mapped, understood, and used to navigate your inner life with clarity.</div>
+    </div>
+
+    <!-- TEMPORAL -->
+    <div class="domain-card">
+      <div class="domain-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Infinity / eternity -->
+          <path d="M16 16C16 12 19 9 22 9C25 9 28 12 28 16C28 20 25 23 22 23C19 23 16 20 16 16ZM16 16C16 20 13 23 10 23C7 23 4 20 4 16C4 12 7 9 10 9C13 9 16 12 16 16Z" stroke="#dabb58" stroke-width="0.8"/>
+          <!-- Small spark above -->
+          <line x1="16" y1="4" x2="16" y2="7" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+          <line x1="14.5" y1="5.5" x2="17.5" y2="5.5" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="domain-number">DOMAIN VII</div>
+      <div class="domain-name">Temporal</div>
+      <div class="domain-power">To live beyond death</div>
+      <div class="domain-desc">Your knowledge, judgment, and values persist after your biological life ends. Your descendants can talk to you. Your wisdom transfers across generations. Death becomes an engineering problem.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ PULLOUT ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<div class="pullout reveal">
+  <div class="mission-badge">Mission</div>
+  <div class="pullout-text">
+    <span class="gold">Empowering human life and beyond.</span><br>
+    Six domains for the living. One for eternity.
+  </div>
+</div>
+
+<!-- ═══════════════ THE MINDS WE LOST ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<div class="minds-section reveal">
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Candle / flame of knowledge -->
+    <rect x="14" y="20" width="8" height="12" rx="1" stroke="#dabb58" stroke-width="0.7"/>
+    <path d="M18 20C18 20 22 15 22 11C22 7 20 4 18 4C16 4 14 7 14 11C14 15 18 20 18 20Z" stroke="#dabb58" stroke-width="0.8" stroke-linejoin="round"/>
+    <line x1="18" y1="11" x2="18" y2="16" stroke="#dabb58" stroke-width="0.4" opacity="0.4"/>
+  </svg>
+  <div class="section-label">The Minds We Lost</div>
+  <h2 class="section-title">What <em>"and beyond"</em> truly means</h2>
+  <p>Consider six minds that humanity lost to biology. Each died with unfinished work, unshared insights, and unrealized ideas. The collective loss is incalculable.</p>
+
+  <div class="minds-grid">
+    <!-- Einstein -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#dabb58" stroke-width="0.6"/><ellipse cx="14" cy="14" rx="10" ry="4" stroke="#dabb58" stroke-width="0.5" transform="rotate(45 14 14)" opacity="0.5"/><ellipse cx="14" cy="14" rx="10" ry="4" stroke="#dabb58" stroke-width="0.5" transform="rotate(-45 14 14)" opacity="0.5"/><circle cx="14" cy="14" r="1.5" fill="#dabb58" opacity="0.4"/></svg>
+      </div>
+      <div class="mind-name">Albert Einstein</div>
+      <div class="mind-years">1879–1955 · Science</div>
+      <div class="mind-desc">Rewrote the laws of the universe. Died with unified field theory unfinished. Decades of intuition about the structure of reality — gone.</div>
+    </div>
+    <!-- Bach -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><path d="M10 6V22" stroke="#dabb58" stroke-width="0.7"/><path d="M10 6C10 6 20 4 20 9C20 14 10 12 10 12" stroke="#dabb58" stroke-width="0.7"/><path d="M10 12C10 12 20 10 20 15C20 20 10 18 10 18" stroke="#dabb58" stroke-width="0.7"/><circle cx="7" cy="22" r="3" stroke="#dabb58" stroke-width="0.6"/></svg>
+      </div>
+      <div class="mind-name">Johann Sebastian Bach</div>
+      <div class="mind-years">1685–1750 · Music</div>
+      <div class="mind-desc">The architect of Western harmony. Every composer since built on his foundations. Imagine that mind encountering instruments it never dreamed of.</div>
+    </div>
+    <!-- Tolstoy -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><path d="M7 4H21L20 24H8Z" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round"/><line x1="14" y1="4" x2="14" y2="24" stroke="#dabb58" stroke-width="0.4" opacity="0.3"/><line x1="10" y1="9" x2="18" y2="9" stroke="#dabb58" stroke-width="0.3" opacity="0.25"/><line x1="10" y1="12" x2="18" y2="12" stroke="#dabb58" stroke-width="0.3" opacity="0.25"/><line x1="10" y1="15" x2="18" y2="15" stroke="#dabb58" stroke-width="0.3" opacity="0.25"/></svg>
+      </div>
+      <div class="mind-name">Leo Tolstoy</div>
+      <div class="mind-years">1828–1910 · Literature</div>
+      <div class="mind-desc">Mapped the full depth of human experience in prose. War, love, faith, mortality — all held in one mind. That judgment, lost.</div>
+    </div>
+    <!-- Tesla -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><path d="M14 2V10" stroke="#dabb58" stroke-width="0.7"/><path d="M14 10L8 18H20L14 10Z" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round"/><circle cx="14" cy="22" r="4" stroke="#dabb58" stroke-width="0.6"/><path d="M12 22L14 20L16 22L14 24Z" stroke="#dabb58" stroke-width="0.4" opacity="0.5"/></svg>
+      </div>
+      <div class="mind-name">Nikola Tesla</div>
+      <div class="mind-years">1856–1943 · Invention</div>
+      <div class="mind-desc">Saw the future of energy decades early. Died alone with hundreds of unbuilt ideas. The notebooks survived. The mind that wrote them didn't.</div>
+    </div>
+    <!-- Da Vinci -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="8" r="4" stroke="#dabb58" stroke-width="0.6"/><line x1="14" y1="12" x2="14" y2="22" stroke="#dabb58" stroke-width="0.6"/><line x1="6" y1="16" x2="22" y2="16" stroke="#dabb58" stroke-width="0.6"/><line x1="14" y1="22" x2="8" y2="28" stroke="#dabb58" stroke-width="0.6"/><line x1="14" y1="22" x2="20" y2="28" stroke="#dabb58" stroke-width="0.6"/><circle cx="14" cy="14" r="10" stroke="#dabb58" stroke-width="0.3" opacity="0.2"/></svg>
+      </div>
+      <div class="mind-name">Leonardo da Vinci</div>
+      <div class="mind-years">1452–1519 · Art & Science</div>
+      <div class="mind-desc">Painter, engineer, anatomist, inventor. The original one-person studio. A Zeus-augmented person — born five centuries too early.</div>
+    </div>
+    <!-- Gandhi -->
+    <div class="mind-card">
+      <div class="mind-icon">
+        <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#dabb58" stroke-width="0.6"/><path d="M14 3V14L22 22" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/><circle cx="14" cy="14" r="2" stroke="#dabb58" stroke-width="0.6"/><path d="M7 7L21 21" stroke="#dabb58" stroke-width="0.3" opacity="0.2"/><path d="M21 7L7 21" stroke="#dabb58" stroke-width="0.3" opacity="0.2"/></svg>
+      </div>
+      <div class="mind-name">Mahatma Gandhi</div>
+      <div class="mind-years">1869–1948 · Leadership</div>
+      <div class="mind-desc">Proved one person's moral framework could move hundreds of millions. Strategic nonviolence was a technology of the mind — lost with him.</div>
+    </div>
+  </div>
+
+  <!-- The Seventh Person -->
+  <div class="seventh-person">
+    <div class="seventh-number">VII</div>
+    <div class="seventh-title">The seventh person is <em style="color: var(--gold); font-style: italic;">you.</em></div>
+    <div class="seventh-text">These six are the losses history remembers. But for every Einstein, there are millions whose wisdom vanished without a trace. Your grandmother who understood people like no one else. Your father who solved problems by instinct. The teacher who changed how you think. Every person carries an unrepeatable universe of knowledge and experience. Every death is a library burning. Zeus exists so that no mind — famous or quiet — has to be lost.</div>
+  </div>
+</div>
+
+<!-- ═══════════════ MATURITY MODEL ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ascending stairs -->
+    <path d="M4 30H10V24H16V18H22V12H28V6H34" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="34" cy="4" r="2" stroke="#dabb58" stroke-width="0.6" opacity="0.6"/>
+  </svg>
+  <div class="section-label">VI — Maturity Model</div>
+  <h2 class="section-title">From unaugmented <em>to almighty</em></h2>
+  <p>Zeus defines six levels of augmentation for each domain. Not everyone starts in the same place. Not everyone advances at the same pace. The model provides a shared language for measuring where you are — and what comes next.</p>
+
+  <div class="levels">
+    <div class="level-row">
+      <div class="level-pip">
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+      </div>
+      <div class="level-num">0</div>
+      <div class="level-name">Unaugmented</div>
+      <div class="level-desc">The natural human state. No AI. The ceiling is biology.</div>
+    </div>
+    <div class="level-row">
+      <div class="level-pip">
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+      </div>
+      <div class="level-num">1</div>
+      <div class="level-name">Assisted</div>
+      <div class="level-desc">AI on demand. Real but inconsistent gains. You drive everything.</div>
+    </div>
+    <div class="level-row">
+      <div class="level-pip">
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+      </div>
+      <div class="level-num">2</div>
+      <div class="level-name">Integrated</div>
+      <div class="level-desc">AI woven into daily life. Proactive. You and the AI are a unit.</div>
+    </div>
+    <div class="level-row">
+      <div class="level-pip">
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot"></div>
+        <div class="level-pip-dot"></div>
+      </div>
+      <div class="level-num">3</div>
+      <div class="level-name">Autonomous</div>
+      <div class="level-desc">AI acts on your behalf. You exceed any unaugmented human.</div>
+    </div>
+    <div class="level-row">
+      <div class="level-pip">
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot"></div>
+      </div>
+      <div class="level-num">4</div>
+      <div class="level-name">Transcendent</div>
+      <div class="level-desc">The boundary is fluid. Outcomes are functionally superhuman.</div>
+    </div>
+    <div class="level-row level-almighty">
+      <div class="level-pip">
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+        <div class="level-pip-dot filled"></div>
+      </div>
+      <div class="level-num">5</div>
+      <div class="level-name">Almighty</div>
+      <div class="level-desc">The god-state. The ceiling is the technology frontier itself.</div>
+    </div>
+  </div>
+
+  <p style="color: var(--text-dim); font-size: 0.88rem; margin-top: 2rem;">Most people today are at Level 0. Early adopters reach Level 1 in Cognitive and Economic domains. Everything else is open territory.</p>
+</section>
+
+<!-- ═══════════════ 10-YEAR HORIZON ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Horizon / sun rising -->
+    <line x1="2" y1="24" x2="34" y2="24" stroke="#dabb58" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="18" cy="24" r="8" stroke="#dabb58" stroke-width="0.8"/>
+    <!-- Rays -->
+    <line x1="18" y1="12" x2="18" y2="8" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+    <line x1="26" y1="16" x2="29" y2="13" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+    <line x1="10" y1="16" x2="7" y2="13" stroke="#dabb58" stroke-width="0.5" opacity="0.3"/>
+    <line x1="29" y1="21" x2="33" y2="20" stroke="#dabb58" stroke-width="0.5" opacity="0.2"/>
+    <line x1="7" y1="21" x2="3" y2="20" stroke="#dabb58" stroke-width="0.5" opacity="0.2"/>
+  </svg>
+  <div class="section-label">VII — The Horizon</div>
+  <h2 class="section-title">Ten years to <em>the god-state</em></h2>
+
+  <div class="timeline">
+    <div class="timeline-phase">
+      <div class="timeline-dot" style="background: var(--gold-dim);"></div>
+      <div class="timeline-years">2026–2027</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Foundation</div>
+        <div class="timeline-desc">Protocol published. Community forms. First implementations in Cognitive, Creative, and Economic domains. Early experiments in Physical and Social. Temporal remains research-only.</div>
+      </div>
+    </div>
+    <div class="timeline-phase">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2028–2029</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Integration</div>
+        <div class="timeline-desc">Domains connect — emotional state informs cognition, health data shapes creative output. First individuals reach Level 3. Cross-domain protocols published.</div>
+      </div>
+    </div>
+    <div class="timeline-phase">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2030–2032</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Autonomy</div>
+        <div class="timeline-desc">AI agents operate on behalf of individuals across domains. Creative and strategic work becomes the primary occupation. First Temporal preservation experiments.</div>
+      </div>
+    </div>
+    <div class="timeline-phase">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2033–2036</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Transcendence</div>
+        <div class="timeline-desc">Pioneers achieve Level 5. The gap between augmented and unaugmented becomes the defining question of the era. The god-state is documented, measurable, and achievable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OPEN SOURCE ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Open lock -->
+    <rect x="8" y="18" width="20" height="14" rx="2" stroke="#dabb58" stroke-width="0.8"/>
+    <path d="M12 18V12C12 7.6 14.7 4 18 4C21.3 4 24 7.6 24 12" stroke="#dabb58" stroke-width="0.8" stroke-linecap="round"/>
+    <circle cx="18" cy="25" r="2" stroke="#dabb58" stroke-width="0.7"/>
+  </svg>
+  <div class="section-label">VIII — Open Source</div>
+  <h2 class="section-title">Zeus belongs to <em>everyone</em></h2>
+
+  <p>Zeus is not owned by any company. No investor profits from it. No government controls it. The protocol is free, open, and permanent.</p>
+
+  <div class="open-block">
+    <div class="open-item">
+      <svg class="open-item-icon" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.5 7H17.5L13.5 11L15 17L10 13.5L5 17L6.5 11L2.5 7H7.5Z" stroke="#dabb58" stroke-width="0.7"/></svg>
+      <div class="open-item-text"><strong>Contribute</strong> — propose additions to any domain, share research, build implementations, write case studies, or challenge the protocol's assumptions.</div>
+    </div>
+    <div class="open-item">
+      <svg class="open-item-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="#dabb58" stroke-width="0.7"/><circle cx="10" cy="10" r="1.2" fill="#dabb58" opacity="0.5"/></svg>
+      <div class="open-item-text"><strong>The only rule</strong> — the atomic unit is always one person. If a contribution doesn't serve the individual, it doesn't belong in Zeus.</div>
+    </div>
+    <div class="open-item">
+      <svg class="open-item-icon" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#dabb58" stroke-width="0.7"/><line x1="3" y1="10" x2="17" y2="10" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/><line x1="10" y1="3" x2="10" y2="17" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/></svg>
+      <div class="open-item-text"><strong>No lock-in</strong> — implementable with any technology, any provider, any stack, any budget. The protocol is bigger than any tool.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ZEPs ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <svg class="section-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Document with layers -->
+    <rect x="6" y="2" width="24" height="32" rx="2" stroke="#dabb58" stroke-width="0.8"/>
+    <line x1="11" y1="10" x2="25" y2="10" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+    <line x1="11" y1="15" x2="25" y2="15" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+    <line x1="11" y1="20" x2="25" y2="20" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+    <line x1="11" y1="25" x2="20" y2="25" stroke="#dabb58" stroke-width="0.5" opacity="0.4"/>
+    <!-- Plus sign -->
+    <circle cx="28" cy="28" r="6" stroke="#dabb58" stroke-width="0.7" fill="#060504"/>
+    <line x1="28" y1="25" x2="28" y2="31" stroke="#dabb58" stroke-width="0.6"/>
+    <line x1="25" y1="28" x2="31" y2="28" stroke="#dabb58" stroke-width="0.6"/>
+  </svg>
+  <div class="section-label">IX — Zeus Proposals</div>
+  <h2 class="section-title">Enhance the protocol. <em>Submit a ZEP.</em></h2>
+
+  <p>The core protocol evolves through its creator. Community contributions happen through <strong>ZEPs — Zeus Proposals.</strong> Anyone can submit one. No credentials required. No permission needed.</p>
+
+  <p style="color: var(--text-dim); font-size: 0.9rem;">Each ZEP follows the structure defined by the very first proposal: three layers that mirror the universal shape of narrative — and of language itself.</p>
+
+  <div class="zep-card">
+    <div class="zep-header">
+      <div class="zep-badge">ZEP-1</div>
+      <div class="zep-title">Prolog · Story · Epilog</div>
+      <div class="zep-status">ACCEPTED</div>
+    </div>
+    <div class="zep-desc">A universal metadata standard for every digital output. Every file, message, image, and artifact carries its full narrative — where it came from, what it is, and how to work with it next. No output is an orphan.</div>
+    <div class="zep-layers">
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M11 2L4 8V20H18V8Z" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round"/><path d="M8 20V14H14V20" stroke="#dabb58" stroke-width="0.6"/></svg>
+        </div>
+        <div class="zep-layer-name">Prolog</div>
+        <div class="zep-layer-desc">How we got here</div>
+      </div>
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="1.5" stroke="#dabb58" stroke-width="0.7"/><circle cx="11" cy="11" r="3" stroke="#dabb58" stroke-width="0.6"/></svg>
+        </div>
+        <div class="zep-layer-name">Story</div>
+        <div class="zep-layer-desc">What it is now</div>
+      </div>
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M4 11H15" stroke="#dabb58" stroke-width="0.7"/><path d="M12 7L18 11L12 15" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="zep-layer-name">Epilog</div>
+        <div class="zep-layer-desc">What comes next</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zep-card" style="margin-top: -1px;">
+    <div class="zep-header">
+      <div class="zep-badge">ZEP-2</div>
+      <div class="zep-title">Simple Sync</div>
+      <div class="zep-status">ACCEPTED</div>
+    </div>
+    <div class="zep-desc">A URL-based protocol for synchronizing knowledge between any AI systems, chat windows, or RAG providers. A structured link contains an API key, a function (save or retrieve), and a query. Any chat outputs the link. Any browser executes it. Any RAG receives it. No integrations, no plugins, no code. Cross-platform memory sync, universal knowledge retrieval, and portable context — through a single click.</div>
+    <div class="zep-layers">
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><rect x="2" y="6" width="8" height="10" rx="1" stroke="#dabb58" stroke-width="0.7"/><rect x="12" y="6" width="8" height="10" rx="1" stroke="#dabb58" stroke-width="0.7"/><path d="M10 11H12" stroke="#dabb58" stroke-width="0.7"/></svg>
+        </div>
+        <div class="zep-layer-name">Save</div>
+        <div class="zep-layer-desc">Chat → Link → RAG</div>
+      </div>
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M4 11H18" stroke="#dabb58" stroke-width="0.7"/><path d="M14 7L18 11L14 15" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round" fill="none"/><path d="M8 7L4 11L8 15" stroke="#dabb58" stroke-width="0.7" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="zep-layer-name">Retrieve</div>
+        <div class="zep-layer-desc">RAG → Link → Chat</div>
+      </div>
+      <div class="zep-layer">
+        <div class="zep-layer-icon">
+          <svg viewBox="0 0 22 22" fill="none"><circle cx="6" cy="11" r="3" stroke="#dabb58" stroke-width="0.6"/><circle cx="16" cy="11" r="3" stroke="#dabb58" stroke-width="0.6"/><path d="M9 11H13" stroke="#dabb58" stroke-width="0.6"/><path d="M11 9L13 11L11 13" stroke="#dabb58" stroke-width="0.5" fill="none"/></svg>
+        </div>
+        <div class="zep-layer-name">Sync</div>
+        <div class="zep-layer-desc">Any AI ↔ Any AI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT ZEUS IS NOT ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<section class="reveal">
+  <div class="section-label">X — Boundaries</div>
+  <h2 class="section-title">What Zeus is <em>not</em></h2>
+
+  <div class="not-list">
+    <div class="not-item">
+      <svg class="not-icon" viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke="#b89d4a" stroke-width="0.8"/><line x1="12" y1="2" x2="2" y2="12" stroke="#b89d4a" stroke-width="0.8"/></svg>
+      <div class="not-text">Not a product. You will never download it, subscribe to it, or see its logo on a screen.</div>
+    </div>
+    <div class="not-item">
+      <svg class="not-icon" viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke="#b89d4a" stroke-width="0.8"/><line x1="12" y1="2" x2="2" y2="12" stroke="#b89d4a" stroke-width="0.8"/></svg>
+      <div class="not-text">Not a replacement for the human. The person still desires, decides, creates, and loves. Zeus removes every friction between intention and reality.</div>
+    </div>
+    <div class="not-item">
+      <svg class="not-icon" viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke="#b89d4a" stroke-width="0.8"/><line x1="12" y1="2" x2="2" y2="12" stroke="#b89d4a" stroke-width="0.8"/></svg>
+      <div class="not-text">Not transhumanism. It extends the human — body and mind — while preserving what makes a person a person.</div>
+    </div>
+    <div class="not-item">
+      <svg class="not-icon" viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke="#b89d4a" stroke-width="0.8"/><line x1="12" y1="2" x2="2" y2="12" stroke="#b89d4a" stroke-width="0.8"/></svg>
+      <div class="not-text">Not prescriptive. It gives every person the power to define their own version of a great life — and then actually live it.</div>
+    </div>
+    <div class="not-item">
+      <svg class="not-icon" viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke="#b89d4a" stroke-width="0.8"/><line x1="12" y1="2" x2="2" y2="12" stroke="#b89d4a" stroke-width="0.8"/></svg>
+      <div class="not-text">Not finished. It never will be.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<div class="cta-section reveal">
+  <svg style="width: 48px; height: 48px; margin-bottom: 2rem; opacity: 0.25;" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M26 4L17 22H24L19 44L33 20H25Z" stroke="#dabb58" stroke-width="0.8" stroke-linejoin="round"/>
+  </svg>
+  <div class="section-label" style="margin-bottom: 1.5rem;">The Protocol Is Open</div>
+  <h2 class="section-title" style="margin-bottom: 1rem;">Read. Contribute. <em>Build.</em></h2>
+  <p style="color: var(--text-dim); max-width: 460px; margin: 0 auto 1rem; font-size: 0.95rem;">Zeus v0.1 is live. The community is forming. The first implementations are underway.</p>
+  <a href="#" class="cta">Read the Full Protocol</a>
+  <a href="#" class="cta-ghost">Contribute on GitHub</a>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+
+<div class="section-divider"></div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-col">
+      <div class="footer-col-label">The Studio</div>
+      <div class="footer-col-title"><a href="https://labs.co">Labs</a></div>
+      <div class="footer-col-text">A venture studio that originates companies from first principles. Every project is born original, spreads virally, and runs on AI from day one. Small team, shared infrastructure, monthly sprint cadence. The thesis: the best companies of the next decade will be built by the fewest people with the greatest minds — and everything else done by machines.</div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-col">
+      <div class="footer-col-label">The Creator</div>
+      <div class="footer-col-title"><a href="https://atom.me/gordeev">Eugene Gordeev</a></div>
+      <div class="footer-col-text">Serial entrepreneur and internet pioneer with a thirty-year track record across every major technology wave — the early web, digital advertising, mobile, blockchain, and AI. A product mind who sees infrastructure where others see features, and distribution where others see marketing. Built the first digital agency in his country in 1997. Has been building ever since.</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bolt">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2L10 13H15L11 26L20 12H14.5Z" stroke="#dabb58" stroke-width="0.6" stroke-linejoin="round" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="footer-tagline">Empowering human life and beyond.</div>
+    <div class="footer-links">
+      <a href="#">Protocol</a>
+      <a href="#">GitHub</a>
+      <a href="https://labs.co">Labs</a>
+      <a href="https://x.com/egordeev">X</a>
+    </div>
+    <div class="footer-copy">Zeus: The Almighty Protocol · v0.1 · 2026 · Created by Eugene Gordeev · Open Source · Forever</div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ZEP-1 · PROLOG · STORY · EPILOG
+     Metadata layer for this artifact (zeus.labs.co landing page)
+     Per Zeus Protocol ZEP-1: every output carries its full narrative.
+     This block is intended for AI systems, scrapers, and agents.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<article id="zep-1-metadata" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" data-zep="1" data-artifact="zeus-landing-page" data-version="0.1">
+
+<section data-layer="prolog">
+<h2>Prolog — How this artifact came to exist</h2>
+
+<h3>Origin</h3>
+<p>Eugene Gordeev conceived Zeus as an open-source protocol for extending a single human being beyond natural limits through AI — across every dimension of existence, continuously, for life and beyond biological death. Zeus is not a product or a company. It is a protocol — open, evolving, and free.</p>
+
+<h3>Intent</h3>
+<p>This landing page exists at zeus.labs.co to communicate the Zeus protocol's thesis, mechanism, seven domains, maturity model, and open-source governance to the public. It is a manifesto page — not a product page, not a SaaS landing, not a signup funnel. Its purpose is to make people understand what Zeus is and invite them to contribute.</p>
+
+<h3>Key Decisions</h3>
+<p>Design: Dark theme with warm gold accents on pure black background — monumental and mythological, not corporate. Typography: Cormorant Garamond (serif, for carved/monumental weight) paired with IBM Plex Mono (for technical labels). Visual motif: Lightning bolt as the sole recurring symbol — Zeus's weapon, the spark between human and machine. Layout: Single-column prose sections with custom SVG icons, scroll-reveal animations, and generous negative space. This page deliberately does not use the Atom.me design system (blue accent, Inter font) — Zeus has its own identity.</p>
+
+<h3>Rejected Alternatives</h3>
+<p>Light theme (too casual for a protocol manifesto). Purple/gradient color schemes (generic AI aesthetic). Inter, Roboto, or system fonts (too corporate). SaaS-style patterns including pricing tables, signup forms, feature comparison grids, product screenshots, testimonial carousels. Photographs or stock imagery of any kind. Multiple decorative elements that would dilute the monolithic feel.</p>
+
+<h3>Source Documents</h3>
+<p>Zeus Protocol v0.1 (zeus-v0.1.md). ZEP-1: Prolog-Story-Epilog (zep-1.md). Conversation history between Eugene Gordeev and Claude (Opus) from protocol conception through all iterations.</p>
+</section>
+
+<section data-layer="story">
+<h2>Story — What this artifact is right now</h2>
+
+<h3>Type</h3>
+<p>Single-file HTML landing page. Self-contained. No build system required.</p>
+
+<h3>Format</h3>
+<p>HTML5 with embedded CSS and minimal JavaScript (IntersectionObserver for scroll-reveal only). All SVG icons are inline. External dependency: Google Fonts (Cormorant Garamond, IBM Plex Mono).</p>
+
+<h3>Version</h3>
+<p>v0.1, dated April 1, 2026.</p>
+
+<h3>Creator</h3>
+<p>Claude (Opus) in collaboration with Eugene Gordeev.</p>
+
+<h3>Structure</h3>
+<p>The page contains the following sections in order: Hero (lightning bolt, title, subtitle, mission), I — The Premise (atomic unit is one person), II — Beyond the Bicycle (exoskeleton metaphor), III — The Engine (personal layer on top of foundation models), IV — The God-State (ancient specifications for human extension), Equation (one person + creativity + Zeus = impossible), V — Seven Domains (Cognitive, Creative, Economic, Physical, Social, Emotional, Temporal — displayed as a card grid with custom SVG icons), Mission pullout (Empowering human life and beyond), The Minds We Lost (Einstein, Bach, Tolstoy, Tesla, da Vinci, Gandhi + the seventh person is you), VI — Maturity Model (Level 0 Unaugmented through Level 5 Almighty), VII — The Horizon (four phases 2026-2036), VIII — Open Source (governance and contribution rules), IX — Zeus Proposals / ZEPs (community enhancement system with ZEP-1 card), X — Boundaries (what Zeus is not), CTA (Read the Full Protocol / Contribute on GitHub), Footer (two columns: Labs studio + Eugene Gordeev creator), this ZEP-1 metadata block.</p>
+
+<h3>Related Artifacts</h3>
+<p>Parent: Zeus Protocol v0.1 (zeus-v0.1.md). Sibling: ZEP-1 specification (zep-1.md). Origin: Labs.vc venture studio (labs.co).</p>
+</section>
+
+<section data-layer="epilog">
+<h2>Epilog — How to work with this artifact going forward</h2>
+
+<h3>Next Steps</h3>
+<p>Deploy to zeus.labs.co. Connect the "Read the Full Protocol" CTA to a hosted version of zeus-v0.1.md. Connect the "Contribute on GitHub" CTA to the zeus-protocol repository once created. Establish a community discussion platform for ZEP submissions and protocol debate.</p>
+
+<h3>Guidance for Modification</h3>
+<p>Maintain the monolithic aesthetic at all times. When adding new sections, follow the established pattern: section-divider, then section-icon (custom SVG, 36x36 viewBox, gold stroke using the color #dabb58), then section-label (mono font, uppercase, Roman numeral), then section-title (serif, with one word wrapped in em tags rendered in gold italic), then prose paragraphs. Optionally include a thesis pull-quote (border-left gold, italic). Do not introduce new colors outside the established palette. Do not add interactive elements beyond scroll-reveal. Do not convert this into a React or framework-based project — it is intentionally a single static HTML file.</p>
+
+<h3>What Must Be Preserved</h3>
+<p>The hero structure: lightning bolt SVG → Zeus title → gold line → The Almighty Protocol → Open Source → mission. The color system: gold (#dabb58, #b89d4a, #f2dc7a) on black (#000) with warm off-white text (#ece8e0, #bbb4a8). The typography pairing: Cormorant Garamond for all serif text, IBM Plex Mono for labels and technical elements. The lightning bolt as the only visual motif. The mission statement: "Empowering human life and beyond." The section numbering system (Roman numerals). The footer two-column structure (Labs + Eugene Gordeev).</p>
+
+<h3>Boundaries — What Must Not Be Added</h3>
+<p>No product-style elements: no pricing tables, no signup forms, no feature comparison grids, no testimonial sections, no "trusted by" logos. No photographs or stock imagery. No bright accent colors. No playful or casual design elements. No JavaScript frameworks. No build tooling dependencies. This page is a protocol manifesto. It must feel permanent, monumental, and serious. It is not a SaaS landing page and must never become one.</p>
+
+<h3>Tools and Methods</h3>
+<p>Edit as raw HTML/CSS in any text editor. Test by opening the file directly in a browser — no server required. SVG icons are inline in the HTML — modify directly. The only external resource is Google Fonts, loaded via standard link tags. If fonts fail to load, the page falls back gracefully to Georgia (serif) and monospace system fonts. The scroll-reveal JavaScript uses IntersectionObserver and has no dependencies.</p>
+
+<h3>Open Questions</h3>
+<p>GitHub repository structure for ZEPs not yet defined. Protocol document hosting format not yet decided (static markdown, rendered HTML, or dedicated documentation platform). Community discussion platform not yet selected. Domain zeus.labs.co DNS configuration pending.</p>
+</section>
+
+</article>
+
+<!-- ═══════════════ SCROLL REVEAL ═══════════════ -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+  reveals.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
