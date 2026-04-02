@@ -49,4 +49,4 @@ Be direct. Be honest. Respect the individual. Argue ideas, not people. The proto
 
 ## Questions?
 
-Open an issue or reach out via [X](https://x.com/egordeev) or [@thechat](https://t.me/thechat).
+Open an issue or reach out via [X](https://x.com/egordeev).

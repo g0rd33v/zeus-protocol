@@ -95,7 +95,7 @@ MIT — see [LICENSE](LICENSE).
 
 **Eugene Gordeev** — serial entrepreneur, internet pioneer, 30-year track record across every major technology wave.
 
-[Labs](https://labs.co) · [X](https://x.com/egordeev) · [@thechat](https://t.me/thechat)
+[Labs](https://labs.co) · [X](https://x.com/egordeev)
 
 ---
 
