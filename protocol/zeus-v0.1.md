@@ -449,4 +449,6 @@ Zeus is not finished. It never will be. As technology advances and as humanity e
 *Created by Eugene Gordeev*
 *Open source · For everyone · Forever*
 
+[Labs](https://labs.co) · [X](https://x.com/egordeev) · [@thechat](https://t.me/thechat)
+
 *Mission: Empowering human life and beyond.*
