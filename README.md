@@ -47,6 +47,7 @@ The protocol evolves through **ZEPs — Zeus Proposals.** Anyone can submit one.
 |---|---|---|---|
 | [ZEP-1](zeps/zep-1.md) | Prolog · Story · Epilog | Universal three-layer metadata standard for every digital output | April 1, 2026 |
 | [ZEP-2](zeps/zep-2.md) | Simple Sync | URL-based protocol for syncing knowledge between any AI systems and RAG providers | April 2, 2026 |
+| [ZEP-3](zeps/zep-3.md) | Living Memory | Personal wiki storage — files not vectors, grounded, versioned, portable | April 12, 2026 |
 
 ### Submit a ZEP
 

@@ -407,6 +407,8 @@ Every ZEP follows the structure defined by ZEP-1 — the protocol's first accept
 
 **ZEP-2: Simple Sync** — defines a URL-based protocol for synchronizing knowledge between any two AI systems, chat windows, or RAG storage providers. A structured link contains an API key, a function (save or retrieve), and a query. Clicking the link executes the operation in a browser — no integrations, no plugins, no custom code. Any chat can output the link; any browser can execute it; any RAG can receive it. Enables cross-platform memory sync (e.g., Claude memory → ChatGPT memory), universal knowledge retrieval from any chat, and human-readable web interfaces for RAG systems that work with or without AI. Accepted April 1, 2026.
 
+**ZEP-3: Living Memory** — defines how all Zeus-generated knowledge is stored: as interconnected Markdown files organized as a personal wiki, where every file is traceable to its raw source, carries a full changelog, and can be shared, exported, or queried from any system. Six principles: files not vectors, wiki not folders, changelog not snapshots, grounded not hallucinated, shareable not locked, extractable not trapped. The wiki is the knowledge. The raw data is the proof. Draft April 12, 2026.
+
 ---
 
 ## How to Contribute
