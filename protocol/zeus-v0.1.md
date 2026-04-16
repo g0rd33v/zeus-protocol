@@ -409,6 +409,8 @@ Every ZEP follows the structure defined by ZEP-1 — the protocol's first accept
 
 **ZEP-3: Living Memory** — defines how all Zeus-generated knowledge is stored: as interconnected Markdown files organized as a personal wiki, where every file is traceable to its raw source, carries a full changelog, and can be shared, exported, or queried from any system. Six principles: files not vectors, wiki not folders, changelog not snapshots, grounded not hallucinated, shareable not locked, extractable not trapped. The wiki is the knowledge. The raw data is the proof. Draft April 12, 2026.
 
+**ZEP-4: Pealer** — defines a protocol for AI-driven interface reduction. An AI agent navigates any digital service on behalf of a person via headless browser, ignoring all visual presentation — ads, CAPTCHAs, redesigns, cookie dialogs, decorative elements — and delivers only the functional result in the person's preferred format. Designed for visually impaired users first, built for everyone. People want results, not obstacles. People want to be happy. Draft April 16, 2026.
+
 ---
 
 ## How to Contribute
