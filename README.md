@@ -50,6 +50,7 @@ The protocol evolves through **ZEPs — Zeus Proposals.** Anyone can submit one.
 | [ZEP-3](zeps/zep-3.md) | Living Memory | Personal wiki storage — files not vectors, grounded, versioned, portable | April 12, 2026 |
 | [ZEP-4](zeps/zep-4.md) | Pealer | AI strips interfaces to pure function — accessibility-first, results only | April 16, 2026 |
 | [ZEP-5](zeps/zep-5.md) | Edge Memory Cache | Device-tailored quantized memory — offline, private, always fresh | April 16, 2026 |
+| [ZEP-6](zeps/zep-6.md) | One Life, One Chat | Single persistent thread — one person, one lifelong conversation, no resets | April 16, 2026 |
 
 ### Submit a ZEP
 

@@ -413,6 +413,8 @@ Every ZEP follows the structure defined by ZEP-1 — the protocol's first accept
 
 **ZEP-5: Edge Memory Cache** — defines how a person's cloud-based Living Memory is compressed, tailored, and synchronized to any edge device. Each device gets its own cache — optimized for its hardware, local model, modality, and time horizon. Delta sync keeps caches fresh. On-device inference keeps data private. The cloud holds the complete picture. The edge holds exactly what's needed. Draft April 16, 2026.
 
+**ZEP-6: One Life, One Chat** — defines a single persistent conversation thread model. One person, one lifelong chat, no resets. The system manages context dynamically across three layers: immediate (current exchange), session (current day), and lifetime (everything ever said, stored in Living Memory). No new chats, no folders, no organizational overhead. Human consciousness is one continuous stream — the interface should be too. Draft April 16, 2026.
+
 ---
 
 ## How to Contribute
