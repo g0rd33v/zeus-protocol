@@ -415,6 +415,8 @@ Every ZEP follows the structure defined by ZEP-1 — the protocol's first accept
 
 **ZEP-6: One Life, One Chat** — defines a single persistent conversation thread model. One person, one lifelong chat, no resets. The system manages context dynamically across three layers: immediate (current exchange), session (current day), and lifetime (everything ever said, stored in Living Memory). No new chats, no folders, no organizational overhead. Human consciousness is one continuous stream — the interface should be too. Draft April 16, 2026.
 
+**ZEP-7: Mind Sharing** — defines a protocol for subscribing to another person's mind. The sharer controls everything: which domains, which topics, what depth, what time range, whether depersonalized. Three modes: Stream (real-time thinking), Archive (historical mind state), Legacy (posthumous access). Enables mutual mind feeds, paid expertise subscriptions, and the social layer of Zeus. Draft April 16, 2026.
+
 ---
 
 ## How to Contribute
