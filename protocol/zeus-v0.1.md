@@ -411,6 +411,8 @@ Every ZEP follows the structure defined by ZEP-1 — the protocol's first accept
 
 **ZEP-4: Pealer** — defines a protocol for AI-driven interface reduction. An AI agent navigates any digital service on behalf of a person via headless browser, ignoring all visual presentation — ads, CAPTCHAs, redesigns, cookie dialogs, decorative elements — and delivers only the functional result in the person's preferred format. Designed for visually impaired users first, built for everyone. People want results, not obstacles. People want to be happy. Draft April 16, 2026.
 
+**ZEP-5: Edge Memory Cache** — defines how a person's cloud-based Living Memory is compressed, tailored, and synchronized to any edge device. Each device gets its own cache — optimized for its hardware, local model, modality, and time horizon. Delta sync keeps caches fresh. On-device inference keeps data private. The cloud holds the complete picture. The edge holds exactly what's needed. Draft April 16, 2026.
+
 ---
 
 ## How to Contribute
