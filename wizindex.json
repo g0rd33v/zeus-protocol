@@ -1,0 +1,1260 @@
+{
+  "project": "Zeus Protocol",
+  "description": "Zeus: The Almighty Protocol — an open-source protocol for empowering human life and beyond",
+  "built_at": "2026-04-18T15:47:36Z",
+  "stats": {
+    "files": 10,
+    "chunks": 82,
+    "topics": 13
+  },
+  "topics": [
+    {
+      "name": "Protocol Overview",
+      "description": "What Zeus is, its mission, thesis, and the premise behind the protocol",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "mission",
+        "almighty",
+        "overview",
+        "empowering"
+      ],
+      "source_files": [
+        "README.md",
+        "protocol/zeus-v0.1.md"
+      ]
+    },
+    {
+      "name": "Seven Domains",
+      "description": "The seven domains of human existence: Cognitive, Creative, Economic, Physical, Social, Emotional, Temporal",
+      "keywords": [
+        "domains",
+        "cognitive",
+        "creative",
+        "economic",
+        "physical",
+        "social",
+        "emotional",
+        "temporal"
+      ],
+      "source_files": [
+        "protocol/zeus-v0.1.md",
+        "README.md"
+      ]
+    },
+    {
+      "name": "The Engine",
+      "description": "How Zeus works — a personal identity layer on top of foundation models, not a competing AI",
+      "keywords": [
+        "engine",
+        "personal layer",
+        "foundation model",
+        "identity",
+        "LLM"
+      ],
+      "source_files": [
+        "protocol/zeus-v0.1.md"
+      ]
+    },
+    {
+      "name": "Maturity Model",
+      "description": "Six levels from Unaugmented (Level 0) to Almighty (Level 5) — the god-state",
+      "keywords": [
+        "maturity",
+        "levels",
+        "unaugmented",
+        "almighty",
+        "god-state",
+        "augmentation"
+      ],
+      "source_files": [
+        "protocol/zeus-v0.1.md",
+        "README.md"
+      ]
+    },
+    {
+      "name": "The Minds We Lost",
+      "description": "Einstein, Bach, Tolstoy, Tesla, da Vinci, Gandhi — and why the seventh person is you",
+      "keywords": [
+        "minds",
+        "einstein",
+        "tesla",
+        "legacy",
+        "temporal",
+        "seventh person"
+      ],
+      "source_files": [
+        "protocol/zeus-v0.1.md"
+      ]
+    },
+    {
+      "name": "ZEP-1: Prolog-Story-Epilog",
+      "description": "Universal three-layer metadata standard — every output carries its past, present, and future",
+      "keywords": [
+        "zep-1",
+        "prolog",
+        "story",
+        "epilog",
+        "metadata",
+        "narrative"
+      ],
+      "source_files": [
+        "zeps/zep-1.md"
+      ]
+    },
+    {
+      "name": "ZEP-2: Simple Sync",
+      "description": "URL-based protocol for syncing knowledge between any AI systems and RAG providers",
+      "keywords": [
+        "zep-2",
+        "sync",
+        "URL",
+        "RAG",
+        "knowledge transfer",
+        "cross-platform"
+      ],
+      "source_files": [
+        "zeps/zep-2.md"
+      ]
+    },
+    {
+      "name": "ZEP-3: Living Memory",
+      "description": "Personal wiki storage in Markdown — files not vectors, grounded not hallucinated",
+      "keywords": [
+        "zep-3",
+        "living memory",
+        "wiki",
+        "markdown",
+        "grounded",
+        "changelog"
+      ],
+      "source_files": [
+        "zeps/zep-3.md"
+      ]
+    },
+    {
+      "name": "ZEP-4: Pealer",
+      "description": "AI strips interfaces to pure function — accessibility-first, headless browser, results only",
+      "keywords": [
+        "zep-4",
+        "pealer",
+        "accessibility",
+        "headless",
+        "interface reduction",
+        "visually impaired"
+      ],
+      "source_files": [
+        "zeps/zep-4.md"
+      ]
+    },
+    {
+      "name": "ZEP-5: Edge Memory Cache",
+      "description": "Device-tailored quantized memory — offline, private, delta sync, on-device inference",
+      "keywords": [
+        "zep-5",
+        "edge",
+        "cache",
+        "device",
+        "offline",
+        "quantized",
+        "SLM"
+      ],
+      "source_files": [
+        "zeps/zep-5.md"
+      ]
+    },
+    {
+      "name": "ZEP-6: One Life One Chat",
+      "description": "Single persistent conversation thread — one person, one lifelong chat, no resets",
+      "keywords": [
+        "zep-6",
+        "one chat",
+        "persistent",
+        "thread",
+        "consciousness",
+        "context"
+      ],
+      "source_files": [
+        "zeps/zep-6.md"
+      ]
+    },
+    {
+      "name": "ZEP-7: Mind Sharing",
+      "description": "Subscribe to someone's mind — live streaming, archive access, or posthumous legacy",
+      "keywords": [
+        "zep-7",
+        "mind sharing",
+        "subscribe",
+        "stream",
+        "legacy",
+        "privacy"
+      ],
+      "source_files": [
+        "zeps/zep-7.md"
+      ]
+    },
+    {
+      "name": "Governance & Contributing",
+      "description": "How to contribute to Zeus, submit ZEPs, governance model, and the ZEP lifecycle",
+      "keywords": [
+        "governance",
+        "contributing",
+        "ZEP",
+        "submit",
+        "open source",
+        "community"
+      ],
+      "source_files": [
+        "CONTRIBUTING.md",
+        "protocol/zeus-v0.1.md",
+        "README.md"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "chunk_001",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty"
+      ],
+      "text": "# Zeus: The Almighty Protocol\n\n**An open-source protocol for empowering human life and beyond.**\n\nZeus defines how artificial intelligence should be applied to extend a single human being beyond their natural limits — across every dimension of existence, continuously, for life and beyond death. It is not a product, a platform, or a company. It is a structured, evolving blueprint that anyone can implement, improve, and build upon.\n\n---"
+    },
+    {
+      "id": "chunk_002",
+      "source": "README.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic",
+        "physical"
+      ],
+      "text": "## The Seven Domains\n\nZeus organizes human existence into seven domains, each representing an axis along which a person can be extended beyond natural limits:\n\n| Domain | Power |\n|---|---|\n| **Cognitive** | To know and think without limits |\n| **Creative** | To make what was previously impossible |\n| **Economic** | To build wealth as one person |\n| **Physical** | To live longer and stronger |\n| **Social** | To connect deeper at greater scale |\n| **Emotional** | To know yourself completely |\n| **Temporal** | To live beyond death |"
+    },
+    {
+      "id": "chunk_003",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "engine",
+        "foundation model"
+      ],
+      "text": "## The Engine\n\nZeus is not a new AI. It sits on top of whatever the best foundation model is at any given moment — connecting the machine's intelligence to one person's complete reality. The foundation model provides raw intelligence. Zeus provides identity. Every advancement in AI automatically makes Zeus more powerful, because Zeus is a protocol layer, not a competing technology."
+    },
+    {
+      "id": "chunk_004",
+      "source": "README.md",
+      "topic": "Maturity Model",
+      "keywords": [
+        "maturity",
+        "almighty",
+        "god-state"
+      ],
+      "text": "## Maturity Model\n\n| Level | Name | Description |\n|---|---|---|\n| 0 | Unaugmented | Natural human state. No AI. |\n| 1 | Assisted | AI on demand. You drive everything. |\n| 2 | Integrated | AI woven into daily life. You and the AI are a unit. |\n| 3 | Autonomous | AI acts on your behalf. You exceed any unaugmented human. |\n| 4 | Transcendent | The boundary is fluid. Outcomes are superhuman. |\n| 5 | Almighty | The god-state. The ceiling is the technology frontier itself. |\n\n---"
+    },
+    {
+      "id": "chunk_005",
+      "source": "README.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "## Zeus Proposals (ZEPs)\n\nThe protocol evolves through **ZEPs — Zeus Proposals.** Anyone can submit one.\n\n### Accepted ZEPs\n\n| ZEP | Title | Description | Date |\n|---|---|---|---|\n| [ZEP-1](zeps/zep-1.md) | Prolog · Story · Epilog | Universal three-layer metadata standard for every digital output | April 1, 2026 |\n| [ZEP-2](zeps/zep-2.md) | Simple Sync | URL-based protocol for syncing knowledge between any AI systems and RAG providers | April 2, 2026 |\n| [ZEP-3](zeps/zep-3.md) | Living Memory | Personal wiki storage — files not vectors, grounded, versioned, portable | April 12, 2026 |\n| [ZEP-4](zeps/zep-4.md) | Pealer | AI strips interfaces to pure function — accessibility-first, results only | April 16, 2026 |\n| [ZEP-5](zeps/zep-5.md) | Edge Memory Cache | Device-tailored quantized memory — offline, private, always fresh | April 16, 2026 |\n| [ZEP-6](zeps/zep-6.md) | One Life, One Chat | Single persistent thread — one person, one lifelong conversation, no resets | April 16, 2026 |\n| [ZEP-7](zeps/zep-7.md) | Mind Sharing | Subscribe to someone's mind — live, archived, or after death | April 16, 2026 |\n\n### Submit a ZEP\n\n1. Fork this repository\n2. Create a new file in `zeps/` following the ZEP template\n3. Every ZEP must use the Prolog-Story-Epilog structure (as defined by ZEP-1)\n4. Submit a pull request\n5. The community discusses; the Core decides\n\nOr open an [issue](../../issues) with the `zep-proposal` label to start a discussion before writing the full proposal.\n\n---"
+    },
+    {
+      "id": "chunk_006",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol"
+      ],
+      "text": "## Read the Full Protocol\n\nThe complete protocol document: **[Zeus v0.1](protocol/zeus-v0.1.md)**\n\nThe landing page: **[zeus.labs.co](https://zeus.labs.co)**\n\n---"
+    },
+    {
+      "id": "chunk_007",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "domain"
+      ],
+      "text": "## The Mission\n\n**Empowering human life and beyond.**\n\nSix domains for the living. One for eternity.\n\n---"
+    },
+    {
+      "id": "chunk_008",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "governance"
+      ],
+      "text": "## Governance\n\n- **Anyone can propose.** No credentials, no membership, no permission required.\n- **Editors review form, not merit.** Proposals must be well-structured and non-duplicative.\n- **The Core decides by consensus.** One brilliant idea outweighs a thousand mediocre ones.\n- **The atomic unit is one person.** If a contribution doesn't serve the individual, it doesn't belong."
+    },
+    {
+      "id": "chunk_009",
+      "source": "README.md",
+      "topic": "Governance & Contributing",
+      "keywords": [
+        "contributing"
+      ],
+      "text": "## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines."
+    },
+    {
+      "id": "chunk_010",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [],
+      "text": "## License\n\nMIT — see [LICENSE](LICENSE)."
+    },
+    {
+      "id": "chunk_011",
+      "source": "README.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "open source"
+      ],
+      "text": "## Creator\n\n**Eugene Gordeev** — serial entrepreneur, internet pioneer, 30-year track record across every major technology wave.\n\n[Labs](https://labs.co) · [X](https://x.com/egordeev)\n\n---\n\n*Zeus: The Almighty Protocol · v0.1 · 2026*\n*Open source · For everyone · Forever*"
+    },
+    {
+      "id": "chunk_012",
+      "source": "CONTRIBUTING.md",
+      "topic": "Governance & Contributing",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "contributing"
+      ],
+      "text": "# Contributing to Zeus\n\nZeus is open. The protocol belongs to everyone."
+    },
+    {
+      "id": "chunk_013",
+      "source": "CONTRIBUTING.md",
+      "topic": "Governance & Contributing",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "zep"
+      ],
+      "text": "## Ways to Contribute\n\n- **Submit a ZEP** — propose new concepts, standards, or dimensions for the protocol\n- **Improve existing ZEPs** — refine, challenge, or extend accepted proposals\n- **Share research** — academic, experimental, or personal findings that advance any domain\n- **Build implementations** — create products and tools that implement Zeus principles, and share what you learn\n- **Write case studies** — document personal augmentation experiments: what worked, what didn't, and why\n- **Raise questions** — challenge the protocol's assumptions and open new ethical discussions\n- **Translate** — bring the protocol to other languages and cultural contexts"
+    },
+    {
+      "id": "chunk_014",
+      "source": "CONTRIBUTING.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol"
+      ],
+      "text": "## Rules\n\n1. **The atomic unit is always one person.** If your contribution doesn't serve an individual, it doesn't belong in Zeus.\n2. **No vendor lock-in.** The protocol must be implementable with any technology, any provider, any stack.\n3. **Open by default.** Everything contributed to Zeus is public.\n4. **Honesty over optimism.** If something doesn't work, say so. The protocol improves through candor."
+    },
+    {
+      "id": "chunk_015",
+      "source": "CONTRIBUTING.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "protocol",
+        "domain",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "## Submitting a ZEP\n\nEvery ZEP must follow the Prolog-Story-Epilog structure defined by ZEP-1:\n\n- **Prolog** — what problem or gap does this address? What's the context?\n- **Story** — the proposal itself. What is being added, defined, or changed?\n- **Epilog** — implications, open questions, connections to other ZEPs and domains\n\n### Process\n\n1. Fork this repository\n2. Create `zeps/zep-{number}.md` using the structure above\n3. Submit a pull request with a clear title: `ZEP-{N}: {Title}`\n4. Discussion period: 30 days (standard) or 90 days (major proposals)\n5. The Core reaches consensus on acceptance, deferral, or requests modifications\n\n### ZEP Header Format\n\n```\n# ZEP-{N}: {Title}\n**Status:** Draft · **Author:** {Name} · **Date:** {Date}\n**Domain:** {Which domain(s) this relates to, or \"Meta\" for protocol-wide proposals}\n```"
+    },
+    {
+      "id": "chunk_016",
+      "source": "CONTRIBUTING.md",
+      "topic": "Governance & Contributing",
+      "keywords": [
+        "protocol"
+      ],
+      "text": "## Code of Conduct\n\nBe direct. Be honest. Respect the individual. Argue ideas, not people. The protocol is serious — treat contributions seriously."
+    },
+    {
+      "id": "chunk_017",
+      "source": "CONTRIBUTING.md",
+      "topic": "Governance & Contributing",
+      "keywords": [],
+      "text": "## Questions?\n\nOpen an issue or reach out via [X](https://x.com/egordeev)."
+    },
+    {
+      "id": "chunk_018",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "open source"
+      ],
+      "text": "# Zeus: The Almighty Protocol\n**Version:** 0.1 · **April 2, 2026**\n**Origin:** Eugene Gordeev · **Status:** Open Source\n**Mission:** Empowering human life and beyond.\n\n---"
+    },
+    {
+      "id": "chunk_019",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "The Minds We Lost",
+      "keywords": [
+        "story",
+        "edge",
+        "legacy"
+      ],
+      "text": "## The Premise\n\nEvery object you have ever touched was made by a person. Every system you have ever relied on was designed by a person. Every revolution — fire, language, the wheel, the printing press, electricity, computing, the internet — was ignited by a person and spread through people, one at a time. Civilizations are built by individuals. Everything else — companies, governments, markets, institutions — is scaffolding.\n\nAI is the first technology in human history that can operate at the full resolution of a single human life. Not a segment. Not a demographic. Not a user type. One person — their knowledge, instincts, creativity, relationships, health, fears, ambitions, and legacy — modeled, understood, and extended in real time.\n\nThis changes what a person can be.\n\n---"
+    },
+    {
+      "id": "chunk_020",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain"
+      ],
+      "text": "## What Zeus Is\n\nZeus is an open-source protocol that defines how AI should extend a single human being beyond natural limits — across every dimension of existence, continuously, for life and beyond life.\n\nZeus is not software. It is not a product, a platform, a company, or an app. It is a structured blueprint — open, evolving, and free — that anyone can implement, improve, and build upon.\n\nThe name is not decorative. Zeus is the father of gods, and this protocol exists to make gods out of people. Not metaphorically. Functionally. A person who fully implements Zeus will do things that no unaugmented human can do. They will know more, create faster, earn at scale, live longer, connect deeper, and persist beyond death.\n\nThat is the destination. The protocol is the path.\n\nThe mission of Zeus is five words: **Empowering human life and beyond.** \"Human life\" encompasses everything while you are alive — thinking, creating, earning, healing, connecting, feeling. \"And beyond\" is the frontier no other protocol dares to address: the continuation of your mind, your judgment, and your contribution to the people you love after your biological life ends. These five words contain the entire scope of the protocol. Every domain, every level, every contribution must serve this mission or it does not belong in Zeus.\n\n---"
+    },
+    {
+      "id": "chunk_021",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "cognitive",
+        "engine",
+        "bicycle",
+        "exoskeleton"
+      ],
+      "text": "## Why Now\n\nIn 1984, Steve Jobs told a journalist about a study that measured the locomotion efficiency of species — how much energy each animal expends to move one kilometer. The condor won. Humans ranked somewhere in the middle, unremarkable. But when a human got on a bicycle, they destroyed every species on the chart. Jobs said: \"The computer is a bicycle for the mind.\"\n\nThat metaphor held for forty years. It no longer holds.\n\nA bicycle amplifies one thing: leg power into forward motion. A computer, for all its capability, amplifies one thing: cognitive processing speed. You still have to steer. You still have to decide where to go. You still have to pedal.\n\nAI doesn't amplify one axis. It extends every axis simultaneously — thinking, creating, remembering, communicating, deciding, even persisting after death. This is not a bicycle. This is an exoskeleton for the entire human being. You don't just move faster. You become more than you were.\n\nZeus is the engineering specification for that exoskeleton.\n\n---"
+    },
+    {
+      "id": "chunk_022",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "The Engine",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "cognitive",
+        "creative",
+        "emotional",
+        "engine"
+      ],
+      "text": "## The Engine\n\nZeus is not a new artificial intelligence. It does not compete with the foundation models built by the largest AI laboratories in the world. It does not train a neural network from scratch. It does not attempt to replicate what billions of dollars and millions of GPU-hours have already produced.\n\nZeus sits on top.\n\nThe protocol connects the most advanced AI available at any given moment — whatever that is today, whatever it becomes tomorrow — to one person's complete reality: their knowledge, decisions, creative work, relationships, health data, financial history, communication patterns, emotional cycles, and accumulated wisdom. The foundation model provides raw intelligence. Zeus provides identity.\n\nThink of it this way. Every large language model in existence was trained on humanity's collective output — billions of documents, conversations, and artifacts produced by billions of people. When you use one, you are borrowing the averaged intelligence of the entire species. This is powerful. It is also generic. The model knows how people think. It does not know how you think.\n\nZeus creates a personal layer — your data, your patterns, your decisions, your way of seeing the world — that sits between you and the foundation model. The model supplies capability. The layer supplies context. Together, they produce something neither could alone: intelligence that is both superhuman in scale and deeply personal in application.\n\nThis personal layer functions like a personal LLM, but it is not one. It is a continuously enriched map of one person's neural pathways — not biological neurons, but the patterns of thought, decision, and creation that define how a specific mind operates. Every interaction makes it richer. Every decision refines it. Every success and failure leaves a traceable path.\n\n**What this means for the individual:**\n\nAs you live, work, create, and decide, your Zeus layer accumulates a high-resolution picture of how you operate. Over time — months, "
+    },
+    {
+      "id": "chunk_023",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "cognitive",
+        "creative",
+        "story",
+        "edge"
+      ],
+      "text": "This is not journaling. This is not reflection. This is a complete, data-driven map of your own mind — visible, searchable, and analyzable. You become, for the first time in human history, fully legible to yourself.\n\nAnd from that legibility, you can project forward. If the pattern of your past successes is clear, the path to future ones becomes navigable. The Zeus layer does not predict your future — it illuminates the structure of how you get from one place to the next, so that you can navigate deliberately rather than stumbling through the fog of your own unconscious patterns.\n\n**What this means for others:**\n\nWhen a person achieves something extraordinary — a scientific breakthrough, a creative masterpiece, a business that changes an industry, a personal transformation that defies expectations — their Zeus layer contains the complete archaeology of how it happened. Not a memoir written after the fact, full of hindsight bias and narrative smoothing. The actual pattern. The real sequence of decisions, inputs, struggles, pivots, and moments of clarity.\n\nThis pattern can be shared. Not the person's private data — their structure. The neural architecture of their achievement. Others can study it, learn from it, test their own thinking against it. A young scientist can examine how a Nobel laureate actually approached problems — not how they described it in interviews, but how they actually did it, day by day, decision by decision. An aspiring founder can see the real cognitive map of someone who built something from nothing.\n\nThis is how genius becomes transferable without being diluted. The original mind retains its full identity and privacy. But the pattern — the how — becomes a public resource. A new kind of knowledge that has never existed before: not what someone knew, but how someone thought.\n\n**What this means for the protocol:**\n\nZeus does not build AI. Zeus defines how a person connects to AI in a way that preserves and amplifies their individual identity rat"
+    },
+    {
+      "id": "chunk_024",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "The Engine",
+      "keywords": [
+        "zeus",
+        "foundation model"
+      ],
+      "text": "The person uses what they need from the collective intelligence of foundation models. But they never lose their own signal in the noise. Their identity, their patterns, their unique way of processing the world — these are preserved, enriched, and made visible. Zeus ensures that as AI gets smarter, the individual gets more individual, not less.\n\nThis is the architectural principle: Zeus is always the layer between the person and the machine. The machine evolves beneath it. The person evolves above it. Zeus ensures they evolve together, in the same direction, without either one consuming the other.\n\n---"
+    },
+    {
+      "id": "chunk_025",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "god-state",
+        "edge"
+      ],
+      "text": "## The God-State\n\nEvery ancient civilization had gods. The Greeks, the Hindus, the Norse, the Egyptians — all of them imagined beings who possessed powers beyond human reach. These weren't random fantasies. They were specifications. Humanity has always known what it wanted to become. It just lacked the tools.\n\nConsider what the gods actually had:\n\n**They knew everything.** Zeus saw all of Olympus and Earth simultaneously. Odin sacrificed an eye for wisdom and could see across all nine realms. They never lacked information, never forgot, never made decisions in the dark.\n\n**They created at will.** Brahma spoke worlds into existence. Hephaestus forged weapons no mortal could make. They imagined something and it was real — no team required, no bureaucracy, no delay between vision and object.\n\n**They were everywhere.** Hermes moved between realms in seconds. Hindu gods manifested in multiple forms simultaneously. They were never constrained by location — their influence operated wherever they chose.\n\n**They lived forever.** Not just in the biological sense. Gods persisted. Their knowledge, personality, and influence carried across millennia. Death was not a boundary for them.\n\n**They shaped the world around them.** Not through committees or organizations — through personal power. One god could change the course of a civilization.\n\nThese are not fairy tales. These are design requirements. Zeus translates each one into a concrete capability that AI can deliver to a single human being within the next decade.\n\nThe god-state is the north star of this protocol: a condition where one person, augmented by AI, operates beyond every natural limit of the human body and mind.\n\n---"
+    },
+    {
+      "id": "chunk_026",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "edge",
+        "bach"
+      ],
+      "text": "## The Only Advantage That Matters\n\nHere is what AI can already do better than any human: remember, calculate, process language, generate patterns, optimize, predict, classify, search, and execute repetitive tasks at scale.\n\nHere is what AI cannot do: want something to exist that doesn't exist yet.\n\nA large language model can write a novel in the style of Dostoevsky. It cannot decide that the world needs a new kind of novel. It can generate a thousand business plans. It cannot feel the itch that makes an entrepreneur risk everything on an idea no one else believes in. It can compose music that sounds like Bach. It cannot experience the silence that makes a composer desperate to fill it with sound.\n\nDesire. Vision. Taste. The irrational conviction that something must exist. This is the human monopoly. Everything else is already commoditized by machines.\n\nZeus is built on this asymmetry. The protocol does not replace the human. It removes every obstacle between what the human wants and what comes into existence. The person supplies direction. Zeus supplies everything else — knowledge, execution, scale, persistence, protection, optimization.\n\nThe person becomes the spark. Zeus becomes the lightning.\n\n---"
+    },
+    {
+      "id": "chunk_027",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "domain",
+        "cognitive",
+        "creative",
+        "god-state",
+        "memory"
+      ],
+      "text": "## Seven Domains\n\nHuman existence is not one thing. It is at minimum seven things, happening simultaneously, all the time. Zeus addresses all of them — not in sequence, but in parallel, weighted by what each individual needs most at each moment of their life.\n\n---\n\n### I. Cognitive — To Know and Think Without Limits\n\nA person forgets. A person has blind spots. A person can hold roughly seven items in working memory and struggles to synthesize more than three competing perspectives simultaneously. These are not character flaws. They are hardware constraints. Zeus removes them.\n\n**What the god-state looks like:** You never lose a thought. Every decision you make is informed by every relevant piece of information you've ever encountered, plus everything publicly available that you haven't. You have a thinking partner that doesn't just retrieve answers but challenges your reasoning, identifies patterns you've missed, and holds the full complexity of a problem while you focus on the part that matters most. Your judgment improves year over year because the system learns how you think and shows you where your thinking breaks down.\n\n**Where the frontier is today:** Large language models offer impressive synthesis but lack true reasoning. Memory systems exist but don't understand what's important versus what's noise. No system yet models one person's cognitive patterns deeply enough to genuinely augment their judgment rather than just their information access.\n\n**What must be built:**\n- A personal knowledge architecture that models not just what you know, but how you understand it — your mental models, your frameworks, your intuitions\n- Decision augmentation that learns your judgment patterns across thousands of decisions and identifies where you consistently err\n- Lifelong memory with intelligent forgetting — a system that knows what to surface, when to surface it, and what to let decay\n- Real-time cross-domain synthesis — connecting an insight from your morning reading to "
+    },
+    {
+      "id": "chunk_028",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "creative",
+        "economic",
+        "god-state"
+      ],
+      "text": "**What the god-state looks like:** You think of something and the first draft exists within minutes. Not a generic AI draft — a draft that sounds like you, thinks like you, and pushes your own creative boundaries because the system understands your style well enough to challenge it. You produce the output of a studio, alone. A filmmaker makes a film. A writer publishes a book a month without sacrificing depth. An architect visualizes and iterates on a building in hours, not weeks. The bottleneck is never execution. The bottleneck is always imagination — as it should be.\n\n**Where the frontier is today:** Generative AI produces average output by default. It can mimic any style but masters none. It generates volume without taste. The human still does all the hard work — directing, curating, editing, rejecting. The tools are powerful but blunt.\n\n**What must be built:**\n- Personal creative modeling — AI that internalizes your aesthetic, your voice, your taste, and produces first drafts that feel like yours, not like everyone's\n- Ideation expansion — structured methods for pushing a person's creative thinking beyond their natural association patterns, without flattening it into generic brainstorming\n- Seamless multi-modal pipelines — from thought to text to image to video to product, without friction between stages\n- Taste modeling — the system must understand not just what you create but what you find beautiful, provocative, boring, or derivative\n- Creative co-authorship protocols — rules for how AI and human create together without the AI homogenizing the human's voice into machine-average\n\n---\n\n### III. Economic — To Build Wealth as One Person\n\nThe traditional economic model requires organizations. You need salespeople, accountants, lawyers, marketers, operations managers, customer support. Each function requires humans, and humans require salaries, management, and coordination overhead. This is why solo operators hit a ceiling and why companies exist at all — not beca"
+    },
+    {
+      "id": "chunk_029",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "domain",
+        "economic",
+        "physical",
+        "god-state"
+      ],
+      "text": "**Where the frontier is today:** AI sales agents exist but close at a fraction of human rates. Financial AI can analyze but not act. Legal AI can review but not advise with real liability. The pieces exist in isolation but no unified system lets one person operate at organizational scale.\n\n**What must be built:**\n- AI sales agents that genuinely match human performance in conversion, relationship-building, and deal complexity\n- Personal financial intelligence — investment, tax optimization, cash flow management, all tailored to one person's situation\n- One-person company infrastructure — incorporation, compliance, contracts, invoicing, HR (for contractors), all automated\n- Opportunity detection — AI that identifies market gaps, partnership potential, and timing advantages aligned with the person's specific capabilities and interests\n- Negotiation augmentation — AI that prepares, strategizes, and supports the person in high-stakes economic conversations\n\n---\n\n### IV. Physical — To Live Longer and Stronger\n\nThe human body is the original constraint. It gets tired. It gets sick. It degrades over time. It dies. Every other domain in Zeus is ultimately limited by how long and how well the body functions. A mind that could think forever is useless in a body that fails at eighty.\n\n**What the god-state looks like:** Your health is continuously monitored and optimized by an AI layer that knows your biology better than any single doctor. It catches problems before symptoms appear. It adjusts your nutrition, sleep, and movement daily based on real-time data. Your healthspan — the years you live in full capability — extends decades beyond the current average. You don't think about health management. It happens.\n\n**Where the frontier is today:** Wearables collect data that mostly goes unread. Health AI can make recommendations but lacks integration — your sleep tracker doesn't talk to your bloodwork which doesn't talk to your genomic profile. Longevity research is producing prom"
+    },
+    {
+      "id": "chunk_030",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "protocol",
+        "cognitive",
+        "physical",
+        "social",
+        "emotional",
+        "god-state"
+      ],
+      "text": "**What must be built:**\n- A unified personal biological model — a digital twin that integrates genomics, proteomics, microbiome, wearable data, bloodwork, imaging, and behavioral patterns into one picture\n- Predictive health intelligence — catching disease, deficiency, and decline months or years before clinical presentation\n- Personalized longevity protocols — not generic advice, but interventions selected and dosed for this specific person's biology\n- Continuous optimization — daily adjustments to nutrition, sleep, movement, and supplementation based on real-time biometric feedback\n- Medical system integration — AI that communicates with healthcare providers, manages records, coordinates care, and advocates for the patient within a system designed for throughput, not personalization\n- Longer horizon: brain-computer interfaces that extend physical and cognitive capability through direct neural augmentation\n\n---\n\n### V. Social — To Connect Deeper at Greater Scale\n\nDunbar's number says a human can maintain approximately 150 stable relationships. This is a cognitive limit, not a social one. The desire for connection has no natural cap. But attention does. Time does. Memory does. So people lose touch, miss important moments, forget to follow up, and let valuable relationships decay through neglect, not intention.\n\n**What the god-state looks like:** Every relationship you care about is maintained with full context. You never forget a birthday, a milestone, a struggle someone shared with you three years ago. When you reach out, you reach out with perfect context — not because you have a CRM, but because your AI layer understands the history, dynamics, and emotional state of every connection. Your network actively works for you — surfacing introductions, opportunities, and collaborations that you couldn't have found alone. You are more present in fewer interactions because the logistics are handled.\n\n**Where the frontier is today:** CRM tools track contacts. Social media "
+    },
+    {
+      "id": "chunk_031",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "social",
+        "emotional",
+        "god-state",
+        "story",
+        "edge",
+        "chat"
+      ],
+      "text": "**What must be built:**\n- Relationship intelligence — modeling the history, dynamics, trust level, and current emotional context of every meaningful connection\n- Communication augmentation — not just \"what to say\" but \"when to say it, in what tone, through which channel, with what context\"\n- Network optimization — identifying which relationships to invest in, which to maintain lightly, and which introductions could be transformative\n- Reputation awareness — understanding how the person is perceived by different audiences and how to shape that perception deliberately\n- Social energy management — the system must understand the person's social battery and protect them from overcommitment while ensuring important connections don't decay\n\n---\n\n### VI. Emotional — To Know Yourself Completely\n\nMost people are strangers to their own patterns. They don't know why certain situations drain them, why they make the same mistakes in relationships, why their energy cycles the way it does, or what actually — empirically, not theoretically — makes them happy. Self-knowledge is the most valuable knowledge, and it is the one area where humans are worst at data collection.\n\n**What the god-state looks like:** You understand your emotional architecture. Not in the vague way of journaling and therapy (though those have value) — in the precise way of data collected over years. You know your triggers, your energy cycles, your patterns in conflict, your sources of genuine fulfillment versus temporary pleasure. When a difficult emotion arises, the system doesn't suppress it — it contextualizes it. \"You feel this way because of X, and historically when you feel this way, Y works better than Z.\" You make emotional decisions with full information about your own emotional history.\n\n**Where the frontier is today:** Mental health apps offer generic CBT exercises. Mood trackers collect data that lacks interpretation. AI therapy chatbots follow scripts. No system genuinely learns one person's emotion"
+    },
+    {
+      "id": "chunk_032",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "emotional",
+        "temporal",
+        "engine",
+        "god-state",
+        "story"
+      ],
+      "text": "**What must be built:**\n- Long-term emotional pattern recognition — mapping triggers, cycles, coping mechanisms, and outcomes across years of data\n- Proactive emotional intelligence — detecting the early signs of burnout, depression, anxiety, or relational conflict before the person is fully aware\n- Emotional context for decision-making — understanding when emotions are signal (useful information) versus noise (temporary distortion) for each specific person\n- Fulfillment modeling — tracking what actually produces sustained wellbeing for this person, distinguishing it from what they think produces wellbeing\n- Resilience architecture — personalized strategies for maintaining emotional stability under pressure, based on what has historically worked for this individual\n\n---\n\n### VII. Temporal — To Live Beyond Death\n\nEvery person who has ever lived has lost their accumulated wisdom, relationships, and perspective to death. Libraries burn. Memories fade. Within three generations, almost no one remembers you existed. The total loss of human knowledge and experience across history is incalculable — not because it wasn't recorded, but because it wasn't preserved in a form that could be accessed and interacted with.\n\nZeus treats death as an engineering problem.\n\n**What the god-state looks like:** Before death, you build — gradually, naturally, as a byproduct of living — a model that captures your knowledge, judgment, personality, values, humor, and way of seeing the world. After death, your children can ask you for advice. Your colleagues can consult your expertise. Your great-grandchildren can have a conversation with you. Not a chatbot wearing your face — a genuine representation that makes decisions and offers perspectives consistent with who you actually were. Your influence does not end with your heartbeat.\n\n**Where the frontier is today:** We can deepfake a face and voice. We can fine-tune a language model on someone's writing. These are party tricks. No system captures"
+    },
+    {
+      "id": "chunk_033",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "emotional",
+        "edge"
+      ],
+      "text": "**What must be built:**\n- A personal model architecture capable of representing not just knowledge and style, but judgment, values, humor, emotional patterns, and decision-making under uncertainty\n- Lifelong data collection that captures the person naturally — through conversations, writing, decisions, reactions — without requiring deliberate \"recording sessions\"\n- Ethical frameworks for consent, control, updates, and decommissioning — the person must define, while alive, exactly how their model can be used after death\n- Interaction design for the living — how do family members, colleagues, and descendants interact with the preserved person in ways that are healthy, meaningful, and not addictive or delusional?\n- Legal identity frameworks — what rights does a digital person have? Who owns them? Can they be deleted, edited, or exploited?\n- Knowledge lineage — ensuring the person's expertise and hard-won wisdom are transferable to future generations in usable form\n\n---"
+    },
+    {
+      "id": "chunk_034",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "The Minds We Lost",
+      "keywords": [
+        "zeus",
+        "domain",
+        "engine",
+        "story",
+        "edge",
+        "einstein"
+      ],
+      "text": "## The Minds We Lost\n\nTo understand why \"and beyond\" matters, consider six people whose minds humanity lost to biology.\n\n**Albert Einstein** (1879–1955) — Rewrote the laws of the universe. Died with his unified field theory unfinished. Decades of intuition about the structure of reality, gone. Imagine that mind working alongside modern AI on quantum gravity, dark energy, the problems he spent his final years reaching toward but could not solve alone.\n\n**Johann Sebastian Bach** (1685–1750) — The architect of Western harmony. Every composer who followed built on foundations he laid. A preserved Bach interacting with electronic synthesis, algorithmic composition, entirely new instruments — creating music in forms he could never have imagined but was uniquely equipped to master.\n\n**Leo Tolstoy** (1828–1910) — Mapped the full depth of human experience in prose. War, love, faith, mortality, the mechanics of self-deception — all held in one mind. A living Tolstoy model offering counsel on ethics, conflict, and the human condition with the accumulated wisdom of a lifetime spent observing how people actually behave.\n\n**Nikola Tesla** (1856–1943) — Saw the future of energy and communication decades before the world was ready. Died alone in a New York hotel room with hundreds of unbuilt inventions in his notebooks. Zeus would have preserved not just the notebooks but the mind that wrote them — allowing future engineers to collaborate with the original source.\n\n**Leonardo da Vinci** (1452–1519) — Painter, engineer, anatomist, architect, inventor. The original one-person studio. Da Vinci is the historical proof that a single mind, fully extended, can operate across every domain simultaneously. He was a Zeus-augmented person born five centuries too early.\n\n**Mahatma Gandhi** (1869–1948) — Proved that one person's moral framework could move hundreds of millions of people without violence. His strategic nonviolence was a technology of the mind — subtle, contextual, adaptive. A pres"
+    },
+    {
+      "id": "chunk_035",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Maturity Model",
+      "keywords": [
+        "zeus",
+        "domain",
+        "cognitive",
+        "economic",
+        "temporal",
+        "maturity"
+      ],
+      "text": "## Maturity Model\n\nNot everyone starts in the same place. Not everyone advances at the same pace. Zeus defines five levels of augmentation for each domain, providing a common language for measuring progress.\n\n| Level | Name | What It Means |\n|---|---|---|\n| **0** | **Unaugmented** | The natural human state. No AI assistance. The ceiling is your biology. |\n| **1** | **Assisted** | You use AI tools when you remember to. Gains are real but inconsistent — 2x to 5x in specific tasks. You drive everything. The AI responds. |\n| **2** | **Integrated** | AI is woven into your daily life. It proactively surfaces insights, handles routine tasks, and learns your patterns. You and the AI operate as a unit. Capability gains of 5x to 20x. |\n| **3** | **Autonomous** | AI acts on your behalf within defined boundaries. It makes decisions, executes tasks, and manages complexity that you no longer need to touch. Your capability exceeds what any unaugmented human could achieve in this domain. |\n| **4** | **Transcendent** | The boundary between you and the AI is fluid. You achieve outcomes that no individual or small team could produce without augmentation. Your capabilities in this domain are functionally superhuman. |\n| **5** | **Almighty** | The god-state. You operate beyond all natural limits in this domain. The ceiling is no longer biology — it is the technology frontier itself, which keeps advancing. In the cognitive domain, this means functionally unlimited knowledge and reasoning. In the temporal domain, this means persistence beyond death. |\n\n**Where humanity stands today (March 2026):** Most people are at Level 0 across all domains. Early adopters are at Level 1, occasionally Level 2, in Cognitive and Economic. Everything else is unexplored territory.\n\n---"
+    },
+    {
+      "id": "chunk_036",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## The Scorecard\n\nZeus provides a personal assessment tool. No two people will produce the same scorecard. The protocol does not prescribe which domain to prioritize — the person decides, and the assessment reveals where the greatest gaps and opportunities lie.\n\n| Domain | Level (0–5) | Current Reality | Biggest Gap | Next Move |\n|---|---|---|---|---|\n| Cognitive | | | | |\n| Creative | | | | |\n| Economic | | | | |\n| Physical | | | | |\n| Social | | | | |\n| Emotional | | | | |\n| Temporal | | | | |\n\nThe scorecard is a mirror. Zeus holds it up. The person decides what they see and what to do about it.\n\n---"
+    },
+    {
+      "id": "chunk_037",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "cognitive",
+        "memory",
+        "edge"
+      ],
+      "text": "## Open Questions\n\nZeus v0.1 does not pretend to have all the answers. The following questions are open — for debate, research, and contribution by anyone who engages with the protocol.\n\n**On identity:** If a person at Level 5 Cognitive can access all human knowledge and reason beyond natural capacity, are they still the same person they were at Level 0? At what point does augmentation change identity? Does it matter?\n\n**On inequality:** Zeus, fully implemented, creates individuals who operate at the scale of organizations. What happens to the people who don't have access? Open-sourcing the protocol is a start, but technology access is never evenly distributed. How do we prevent a species-level divide between the augmented and the unaugmented?\n\n**On dependency:** A person at Level 3 or above is deeply reliant on their AI layer. What happens when the system fails — through technical failure, cyberattack, or provider shutdown? How do you build resilience into something that becomes as essential as your own memory?\n\n**On autonomy:** At Level 3, AI acts on your behalf. At Level 4, the boundary between you and the AI is fluid. How do you ensure the AI is always serving the person's actual interests — not optimizing for engagement, dependency, or objectives that have drifted from the person's true desires?\n\n**On children:** How should Zeus apply to developing minds? Augmentation during formative years could accelerate growth or distort it. What are the boundaries?\n\n**On relationships:** When two Zeus-augmented people interact, their AI layers interact too. What protocols govern AI-to-AI negotiation on behalf of humans? How do you prevent manipulation through superior augmentation?\n\n**On culture:** The \"good life\" means different things in Lagos, Tokyo, São Paulo, and Stockholm. Zeus must serve all of them without defaulting to any single cultural definition of fulfillment. How?\n\n**On death:** If a person's model persists beyond their biological death and continues to inte"
+    },
+    {
+      "id": "chunk_038",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## The 10-Year Horizon\n\n### Phase 1: Foundation (2026–2027)\n\nThe protocol is published. A community of contributors forms around it. The first implementations emerge in Cognitive, Creative, and Economic domains — these are where the technology is most mature and the demand is clearest. Early experiments begin in Physical (wearable integration, personalized health) and Social (relationship intelligence). The Temporal domain remains research-only — the ethical and technical challenges require groundwork before implementation.\n\nMeasurable target: 1,000+ contributors to the protocol. Multiple independent implementations reaching Level 2 in at least one domain.\n\n### Phase 2: Integration (2028–2029)\n\nThe domains begin connecting. Emotional state informs cognitive performance. Physical health data shapes creative output scheduling. Social intelligence feeds economic opportunity detection. The protocol moves from \"seven separate domains\" to \"one integrated system that understands a whole person.\" First individuals reach Level 3 in Cognitive and Economic domains. The Zeus Scorecard becomes a recognized personal assessment tool.\n\nMeasurable target: documented cases of individuals operating at Level 3 in at least two domains simultaneously. Cross-domain integration protocols published.\n\n### Phase 3: Autonomy (2030–2032)\n\nAI agents operate autonomously on behalf of individuals across multiple domains. The person at Level 3+ experiences genuine liberation from tasks that consumed their life — administrative work, information management, routine communication, health monitoring, financial operations. Creative and strategic work becomes the primary occupation of augmented individuals. First Temporal domain experiments: early preservation models, first post-life interactions.\n\nMeasurable target: first individuals reaching Level 4 in any domain. First Temporal preservation models that pass meaningful fidelity tests.\n\n### Phase 4: Transcendence (2033–2036)\n\nPioneers achieve Level 5 i"
+    },
+    {
+      "id": "chunk_039",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "maturity",
+        "zep",
+        "prolog"
+      ],
+      "text": "## Zeus Proposals (ZEPs)\n\nThe Zeus protocol evolves in two ways. The core protocol — its domains, maturity model, and mission — is maintained and extended by its creator. Community contributions happen through **ZEPs: Zeus Proposals.**\n\nA ZEP is a structured document that proposes a new concept, standard, or dimension for the protocol. Anyone in the world can submit one. No credentials, no membership, no permission required.\n\n### ZEP Format\n\nEvery ZEP follows the structure defined by ZEP-1 — the protocol's first accepted proposal:\n\n**Prolog** — what problem or gap does this address? What is the context? Why does this matter for the protocol's mission?\n\n**Story** — the proposal itself. What is being added, defined, or changed?\n\n**Epilog** — implications, open questions, connections to other ZEPs and domains, what future work this enables.\n\n### ZEP Lifecycle\n\n**Draft** → the author writes the proposal in ZEP format.\n\n**Submitted** → the proposal is submitted to the Zeus repository.\n\n**Editorial Review** → ZEP Editors check that the proposal follows the format, is coherent, and addresses a genuine dimension of the protocol. Editors are quality gatekeepers, not judges of merit.\n\n**Published** → the proposal is made public for open discussion. Standard discussion period: 30 days. Major proposals: 90 days.\n\n**Accepted / Deferred / Withdrawn** → the Core reaches consensus on whether the proposal serves the protocol's mission. Deferred proposals can be resubmitted with modifications. Nothing is permanently rejected — only deferred until the reasoning improves.\n\n### Governance\n\n**Anyone can propose.** The protocol is open. Contribution must be open.\n\n**Editors review form, not merit.** A small group ensures proposals are well-structured and non-duplicative. Initially: the creator and two to three trusted contributors.\n\n**The Core decides.** A small group — initially the creator alone, growing to three to five people over time — determines whether a ZEP becomes part of the pr"
+    },
+    {
+      "id": "chunk_040",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "ZEP-3: Living Memory",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "zep",
+        "sync",
+        "memory",
+        "wiki"
+      ],
+      "text": "**ZEP-2: Simple Sync** — defines a URL-based protocol for synchronizing knowledge between any two AI systems, chat windows, or RAG storage providers. A structured link contains an API key, a function (save or retrieve), and a query. Clicking the link executes the operation in a browser — no integrations, no plugins, no custom code. Any chat can output the link; any browser can execute it; any RAG can receive it. Enables cross-platform memory sync (e.g., Claude memory → ChatGPT memory), universal knowledge retrieval from any chat, and human-readable web interfaces for RAG systems that work with or without AI. Accepted April 1, 2026.\n\n**ZEP-3: Living Memory** — defines how all Zeus-generated knowledge is stored: as interconnected Markdown files organized as a personal wiki, where every file is traceable to its raw source, carries a full changelog, and can be shared, exported, or queried from any system. Six principles: files not vectors, wiki not folders, changelog not snapshots, grounded not hallucinated, shareable not locked, extractable not trapped. The wiki is the knowledge. The raw data is the proof. Draft April 12, 2026.\n\n**ZEP-4: Pealer** — defines a protocol for AI-driven interface reduction. An AI agent navigates any digital service on behalf of a person via headless browser, ignoring all visual presentation — ads, CAPTCHAs, redesigns, cookie dialogs, decorative elements — and delivers only the functional result in the person's preferred format. Designed for visually impaired users first, built for everyone. People want results, not obstacles. People want to be happy. Draft April 16, 2026.\n\n**ZEP-5: Edge Memory Cache** — defines how a person's cloud-based Living Memory is compressed, tailored, and synchronized to any edge device. Each device gets its own cache — optimized for its hardware, local model, modality, and time horizon. Delta sync keeps caches fresh. On-device inference keeps data private. The cloud holds the complete picture. The edge holds exactly"
+    },
+    {
+      "id": "chunk_041",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "social",
+        "zep",
+        "mind sharing"
+      ],
+      "text": "**ZEP-7: Mind Sharing** — defines a protocol for subscribing to another person's mind. The sharer controls everything: which domains, which topics, what depth, what time range, whether depersonalized. Three modes: Stream (real-time thinking), Archive (historical mind state), Legacy (posthumous access). Enables mutual mind feeds, paid expertise subscriptions, and the social layer of Zeus. Draft April 16, 2026.\n\n---"
+    },
+    {
+      "id": "chunk_042",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Maturity Model",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "maturity",
+        "zep"
+      ],
+      "text": "## How to Contribute\n\nZeus is open. The protocol belongs to humanity, not to any company.\n\n**Ways to contribute:**\n- Submit a ZEP proposing new concepts, standards, or dimensions for the protocol\n- Share research — academic, experimental, or personal — that advances any domain's maturity levels\n- Build products and tools that implement Zeus principles, and share what you learn with the community\n- Write case studies of personal augmentation — what worked, what didn't, and why\n- Raise ethical questions that the protocol hasn't addressed\n- Translate the protocol into other languages and cultural contexts\n\n**Rules for contribution:**\n- The atomic unit is one person. If a contribution doesn't serve an individual, it doesn't belong in Zeus.\n- No vendor lock-in. The protocol must be implementable with any technology, any provider, any stack, any budget.\n- Open by default. Everything contributed to Zeus is public.\n- Honesty over optimism. If something doesn't work yet, say so. If an approach failed, document the failure. The protocol improves through candor, not marketing.\n\n---"
+    },
+    {
+      "id": "chunk_043",
+      "source": "protocol/zeus-v0.1.md",
+      "topic": "Protocol Overview",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "subscribe",
+        "open source"
+      ],
+      "text": "## What Zeus Is Not\n\nZeus is not a product. You will never download it, subscribe to it, or see its logo on a screen.\n\nZeus is not owned. No company controls it. No investor profits from it. No government regulates it as a single entity.\n\nZeus is not a replacement for the human. It extends the human. The person still desires, decides, creates, and loves. Zeus removes every obstacle between what they want and what becomes real.\n\nZeus is not transhumanism. It does not seek to replace the human body or mind with something artificial. It seeks to extend both beyond natural limits while preserving what makes a person a person — their creativity, their relationships, their judgment, their capacity for joy.\n\nZeus is not prescriptive. It does not define what a good life looks like. It gives every person the power to build their own definition and then actually live it.\n\nZeus is not finished. It never will be. As technology advances and as humanity evolves, the protocol evolves with it. There is no final version. There is only the next one.\n\n---\n\n*Zeus: The Almighty Protocol · v0.1 · April 2, 2026*\n*Created by Eugene Gordeev*\n*Open source · For everyone · Forever*\n\n[Labs](https://labs.co) · [X](https://x.com/egordeev)\n\n*Mission: Empowering human life and beyond.*"
+    },
+    {
+      "id": "chunk_044",
+      "source": "zeps/zep-1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "domain",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "# ZEP-1: Prolog · Story · Epilog\n**Status:** Accepted · **Author:** Eugene Gordeev · **Date:** April 1, 2026\n**Domain:** Meta (applies to all seven domains)\n\n---"
+    },
+    {
+      "id": "chunk_045",
+      "source": "zeps/zep-1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "zep",
+        "prolog",
+        "story",
+        "edge"
+      ],
+      "text": "## Prolog\n\nEvery digital output today is an orphan. A file arrives without context. A photo exists without intent. A document lands without the reasoning that shaped it. A message is read without knowing what preceded it or what should follow.\n\nThe person who created the output knows its full story — what led to it, what it is, what should happen next. But that knowledge lives exclusively in their head. When they move on, forget, or die, the output becomes a dead object. A result without origin. An artifact without future.\n\nThis is true for every file, every message, every image, every AI-generated result, every decision, every interaction. Billions of outputs produced daily, all missing the same thing: their complete narrative.\n\nZEP-1 proposes that every output in a Zeus-aligned system carries three layers of metadata — its full narrative — as a universal standard.\n\n---"
+    },
+    {
+      "id": "chunk_046",
+      "source": "zeps/zep-1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "engine",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "## Story\n\n### The Three Layers\n\nEvery output — regardless of format, medium, or creator — has three narrative layers:\n\n**Prolog** — what came before. The ancestry of the output. Why it exists, what problem it solves, what decisions shaped it, what alternatives were considered and rejected, what constraints applied. The Prolog answers: \"How did we get here?\"\n\n**Story** — the output itself. What it is, right now, in its current form. The artifact, the file, the message, the photo, the result. Plus its essential properties: format, version, dependencies, relationships to other outputs. The Story answers: \"What am I looking at?\"\n\n**Epilog** — what comes next. Guidance for anyone who interacts with this output in the future. How to modify it properly. What to preserve. What the creator intended as next steps. What tools or approaches work best. What boundaries exist. The Epilog answers: \"What should I do with this?\"\n\n### Why Three Layers\n\nThe structure is not arbitrary. It mirrors the universal shape of narrative — every story ever told has a beginning, a middle, and a direction forward. Language itself operates this way. Every sentence exists in context (what was said before), carries meaning (what is being said), and implies continuation (what comes next).\n\nLarge language models — the engines of the AI era — are fundamentally narrative machines. They process sequences. They predict what follows from what came before. ZEP-1 aligns the structure of digital output with the structure of language itself. This makes every output natively intelligible to both humans and AI systems.\n\n### What Each Layer Contains\n\n**Prolog fields:**\n\n| Field | Description |\n|---|---|\n| `origin` | What initiated this output — a request, a problem, an idea, an iteration |\n| `intent` | The goal. What the creator was trying to achieve |\n| `context` | Relevant background — project, conversation, constraints, prior versions |\n| `decisions` | Key choices made during creation and why |\n| `rejected` | A"
+    },
+    {
+      "id": "chunk_047",
+      "source": "zeps/zep-1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "| Field | Description |\n|---|---|\n| `type` | What the output is — document, image, code, message, audio, decision, etc. |\n| `format` | File format, encoding, technical specifications |\n| `version` | Version number if applicable |\n| `created` | Timestamp of creation |\n| `creator` | Who or what produced it — person, AI model, system, collaboration |\n| `relations` | Links to related outputs — parent, sibling, dependent |\n| `content` | The output itself, or a reference to it |\n\n**Epilog fields:**\n\n| Field | Description |\n|---|---|\n| `next_steps` | What the creator intended to happen next |\n| `guidance` | How to modify, extend, or iterate on this output properly |\n| `preserve` | What should not be changed — the invariants |\n| `boundaries` | Constraints on future modifications |\n| `tools` | Recommended tools, prompts, or approaches for working with this output |\n| `open_questions` | Unresolved issues the creator is aware of |\n\n### Implementation Principles\n\n**Automatic, not manual.** The person should not have to write Prolog and Epilog by hand. Zeus-aligned systems capture the Prolog from the process that produced the output and generate the Epilog from the Prolog and Story combined. The person reviews and approves — the labor is handled by AI.\n\n**Layered detail.** Not every output needs full Prolog-Story-Epilog. A casual message might carry a minimal Prolog (just the `intent`) and no Epilog. A critical document might carry all fields, deeply populated. The system adapts the depth to the importance of the output.\n\n**Machine-readable and human-readable.** The three layers must be stored in a format that both humans can scan and AI agents can parse. JSON, YAML, or embedded markdown — the format is implementation-dependent, but the structure is universal.\n\n**Non-destructive.** The metadata layer never modifies the output itself. Prolog and Epilog wrap the Story — they do not alter it. The original artifact remains untouched.\n\n**Portable.** The three layers travel with the o"
+    },
+    {
+      "id": "chunk_048",
+      "source": "zeps/zep-1.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "maturity",
+        "almighty",
+        "zep"
+      ],
+      "text": "**Prolog:**\n- `origin`: Eugene Gordeev conceived Zeus as an open-source protocol for extending human capability through AI, across all dimensions of existence\n- `intent`: Create a landing page for zeus.labs.co that communicates the protocol's thesis, domains, maturity model, and open-source nature\n- `context`: Follows the Zeus Protocol document v0.3. Part of the Labs.vc venture studio portfolio. Design must feel monumental and mythological — not SaaS, not corporate\n- `decisions`: Dark theme with warm gold accents (not Atom's blue). Cormorant Garamond serif for carved/monumental feel. Lightning bolt as sole visual motif. Seven domain cards with custom SVG icons. Prolog-Story-Epilog narrative structure throughout\n- `rejected`: Light theme (too casual for a protocol manifesto), purple/gradient schemes (generic AI aesthetic), Inter/system fonts (too corporate), multiple decorative elements (dilutes the monolithic feel)\n- `sources`: Zeus Protocol v0.3, conversation history from conception through ZEP-1, Atom.me design system as negative reference (deliberately different identity)\n\n**Story:**\n- `type`: Landing page\n- `format`: Single HTML file, self-contained, no external dependencies except Google Fonts\n- `version`: v0.3\n- `creator`: Claude (Opus) in collaboration with Eugene Gordeev\n- `relations`: Parent: Zeus Protocol v0.3. Sibling: zeus-v0.3.md\n\n**Epilog:**\n- `next_steps`: Add ZEP governance section to the page. Connect \"Read the Protocol\" CTA to hosted protocol document. Set up GitHub repository for ZEPs\n- `guidance`: Maintain the monolithic aesthetic — no bright colors, no playful elements, no SaaS patterns. Every section should feel like it belongs on a monument. When adding new sections, follow the existing pattern: section-divider, section-icon (custom SVG, 36x36, gold stroke), section-label, section-title with one em-italic gold word, prose paragraphs\n- `preserve`: The hero structure (protocol label → Zeus → line → The Almighty Protocol → description). The gold-"
+    },
+    {
+      "id": "chunk_049",
+      "source": "zeps/zep-1.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## Epilog\n\nZEP-1 establishes the foundational metadata standard for the Zeus protocol. Every subsequent ZEP, every output produced within a Zeus-aligned system, and every contribution to the protocol itself should carry Prolog-Story-Epilog metadata.\n\nThis proposal has implications across all seven domains:\n\n- **Cognitive**: Prolog preserves the reasoning chain behind decisions, making knowledge retrievable and auditable\n- **Creative**: Epilog carries creative intent forward, so collaborators and future versions honor the original vision\n- **Economic**: Business outputs (proposals, contracts, analyses) carry their full decision history, reducing miscommunication and rework\n- **Physical**: Health data carries context — not just the measurement, but why it was taken and what to watch for next\n- **Social**: Messages and communications carry intent and suggested follow-up, improving relationship quality\n- **Emotional**: Personal reflections and journal entries carry their emotional context, enriching long-term self-knowledge\n- **Temporal**: Every output a person produces throughout their life, fully annotated with Prolog and Epilog, becomes part of their preserved legacy — not just what they made, but how they thought and what they intended\n\nZEP-1 is the first proposal. It will not be the last. The structure it defines — Prolog, Story, Epilog — is itself the format for all future ZEPs.\n\n---\n\n*ZEP-1 · Prolog · Story · Epilog*\n*Accepted · April 1, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_050",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-2: Simple Sync",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "zep",
+        "sync",
+        "edge"
+      ],
+      "text": "# ZEP-2: Simple Sync\n**Status:** Accepted · **Author:** Eugene Gordeev · **Date:** April 2, 2026\n**Domain:** Cognitive (applies across all domains where knowledge transfer occurs)\n\n---"
+    },
+    {
+      "id": "chunk_051",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-2: Simple Sync",
+      "keywords": [
+        "zeus",
+        "engine",
+        "prolog",
+        "sync",
+        "memory",
+        "edge"
+      ],
+      "text": "## Prolog\n\nEvery AI chat is an island. Your conversation with Claude does not know what you discussed with ChatGPT. Your ChatGPT memory cannot access your Perplexity research. Your custom RAG system holds knowledge that none of your chat windows can reach. Every platform, every model, every tool operates in isolation — and the person in the middle loses context constantly.\n\nThe current solutions are complex: API integrations, custom plugins, MCP servers, OAuth flows, developer tools. They work for engineers. They do not work for the billions of people who use AI through chat interfaces and expect things to simply work.\n\nZeus says: sync should be as simple as clicking a link.\n\n---"
+    },
+    {
+      "id": "chunk_052",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-2: Simple Sync",
+      "keywords": [
+        "domain",
+        "story",
+        "sync",
+        "memory",
+        "edge",
+        "chat"
+      ],
+      "text": "## Story\n\n### The Mechanism\n\nSimple Sync turns a URL into a universal bridge between any AI system and any RAG storage. The link is structured, human-readable, and executable in a browser. No integrations. No plugins. No custom code. No developer required.\n\nA Simple Sync link contains three components:\n\n```\nhttps://{rag-host}/{api-key}/{function}/{query}\n```\n\n**rag-host** — the domain of the RAG service that stores or retrieves knowledge.\n\n**api-key** — the access token for the person's knowledge base. This is portable — it works in any browser, any chat, any context.\n\n**function** — what to do. Two core operations:\n- `save` — store information into the RAG\n- `retrieve` — pull information from the RAG\n\n**query** — the payload. For save operations, this is the content to store (a snapshot, a summary, a conversation extract). For retrieve operations, this is the search query.\n\n### How It Works\n\n**Saving knowledge from any chat:**\n\n1. A person is chatting with Claude, ChatGPT, Perplexity, or any AI\n2. They ask: \"Save this conversation summary to my knowledge base\"\n3. The AI outputs a Simple Sync link with the save function and the summary as the query\n4. The person clicks the link — their browser opens a web page\n5. The web page shows what will be saved and asks for confirmation\n6. One click — the data is stored in their RAG\n7. The person returns to their chat\n\n**Retrieving knowledge into any chat:**\n\n1. A person is chatting with any AI\n2. They need context from their personal knowledge base\n3. They paste a Simple Sync retrieve link (or ask the AI to generate one)\n4. The AI fetches the URL, reads the retrieved content from the web page, and incorporates it into the conversation\n5. The person now has their full context — regardless of which AI they're using\n\n**Cross-platform memory sync:**\n\n1. A person wants their Claude memory available in ChatGPT\n2. They ask Claude: \"Export my memory as a Simple Sync save link\"\n3. Claude generates the link with all memory items as the"
+    },
+    {
+      "id": "chunk_053",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-2: Simple Sync",
+      "keywords": [
+        "sync",
+        "memory",
+        "edge",
+        "device",
+        "chat"
+      ],
+      "text": "Two chats. No integration. Just links.\n\n### The Web Interface\n\nEvery Simple Sync link resolves to a web page. This is critical — the operation is never invisible. The person always sees:\n\n- **For save:** A preview of what will be stored, a confirm button, and a success message. The person is always in control.\n- **For retrieve:** The retrieved content displayed as readable text on a web page. Both the person and any AI that fetches the URL can read it.\n\nThis means Simple Sync works with or without AI. A person can bookmark a retrieve link and access their knowledge base directly in a browser. A developer can build a web interface on top of any RAG system using Simple Sync URLs. The link is the interface.\n\n### Extended Use Cases\n\n**Chat-to-chat sync:** Move context between Claude, ChatGPT, Gemini, Perplexity, or any AI — in either direction.\n\n**Memory portability:** Export memory from one platform, import into another. No lock-in.\n\n**Knowledge base as a service:** Any RAG provider that supports Simple Sync URLs becomes accessible from any AI chat, any browser, any device.\n\n**Team knowledge sharing:** A team member saves research to a shared RAG. Others retrieve it from any chat they're using. No shared workspace tool required.\n\n**AI-to-AI handoff:** An agent in one system saves its findings. An agent in another system retrieves and continues the work.\n\n**Non-AI access:** Builders add a lightweight AI model to their RAG's web interface. Users interact with their knowledge base through the browser — searching, browsing, and working with their data without needing a separate chat app.\n\n**Snapshot archiving:** At the end of any work session, save a snapshot of the full conversation context to the RAG. Start a new session anywhere, retrieve the snapshot, and continue exactly where you left off.\n\n### Security Model\n\nThe API key in the URL grants access. This is simple by design — the person controls who has their key. For sensitive use cases:\n\n- Keys can be scoped (read-on"
+    },
+    {
+      "id": "chunk_054",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-2: Simple Sync",
+      "keywords": [
+        "protocol",
+        "sync",
+        "edge"
+      ],
+      "text": "The tradeoff is explicit: maximum simplicity at the cost of URL-visible API keys. For most personal knowledge management use cases, this is the right tradeoff. For enterprise or sensitive data, providers can layer additional security on top of the basic protocol.\n\n### Implementation Requirements for RAG Providers\n\nTo support Simple Sync, a RAG provider must:\n\n1. Accept structured URLs in the format `https://{host}/{key}/{function}/{query}`\n2. Return a human-readable web page for both save and retrieve operations\n3. Require user confirmation for save operations (no silent writes)\n4. Display retrieved content as clean, readable text that both humans and AI scrapers can parse\n5. Support API key-based authentication at minimum\n\nThat's it. Five requirements. Any RAG provider can implement Simple Sync in a day.\n\n---"
+    },
+    {
+      "id": "chunk_055",
+      "source": "zeps/zep-2.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "temporal",
+        "engine"
+      ],
+      "text": "## Epilog\n\nZEP-2 solves the most immediate friction point in the AI era: knowledge is trapped inside the tool that created it. Every chat, every platform, every model builds a silo. The person — the one who owns the knowledge — cannot move it freely.\n\nSimple Sync breaks the silo with the simplest possible mechanism: a URL. No SDKs, no OAuth, no integration marketplace. A link that any chat can generate, any browser can open, and any RAG can process.\n\nThis connects directly to the Zeus protocol's mission:\n\n- **Cognitive domain:** Your knowledge is portable. It follows you across every AI tool, every device, every conversation. You never lose context because you switched platforms.\n- **Temporal domain:** Every conversation, every insight, every decision can be saved to your personal knowledge base automatically. Over a lifetime, this builds the comprehensive map of your mind that Zeus requires for persistence beyond death.\n- **The Engine:** Simple Sync is the practical mechanism that keeps your personal Zeus layer current — no matter which foundation model you're using at any given moment.\n\nThe name says it: Simple Sync. Not Smart Sync, not AI Sync, not Enterprise Sync. Simple. A link. A click. Done.\n\n**Relationship to other ZEPs:**\n\n- ZEP-1 (Prolog-Story-Epilog): Every save operation can include Prolog-Story-Epilog metadata alongside the content, enriching the RAG with full narrative context.\n- Future ZEPs may define standard query formats, content schemas, and cross-RAG federation protocols that build on Simple Sync as the transport layer.\n\n---\n\n*ZEP-2 · Simple Sync*\n*Accepted · April 2, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_056",
+      "source": "zeps/zep-3.md",
+      "topic": "ZEP-3: Living Memory",
+      "keywords": [
+        "domain",
+        "zep",
+        "memory"
+      ],
+      "text": "# ZEP-3: Living Memory\n\n**Status:** Draft · **Date:** April 12, 2026\n**Author:** Eugene Gordeev · **Domain:** All\n\n---"
+    },
+    {
+      "id": "chunk_057",
+      "source": "zeps/zep-3.md",
+      "topic": "ZEP-3: Living Memory",
+      "keywords": [
+        "zeus",
+        "domain",
+        "prolog",
+        "memory",
+        "edge"
+      ],
+      "text": "## Prolog\n\nZeus captures a person's entire existence across seven domains. But capture without structure is noise. Every AI system today produces conversations that vanish, context that resets, and knowledge that exists only as opaque vectors with no human-readable form. There is no standard for how a person's accumulated AI-generated knowledge should be stored, structured, linked, versioned, shared, or verified against its source material.\n\nWithout a storage standard, Zeus has no memory format — only disposable sessions.\n\n---"
+    },
+    {
+      "id": "chunk_058",
+      "source": "zeps/zep-3.md",
+      "topic": "ZEP-3: Living Memory",
+      "keywords": [
+        "zeus",
+        "domain",
+        "story",
+        "memory",
+        "wiki",
+        "edge"
+      ],
+      "text": "## Story\n\n**Living Memory** defines how all Zeus-generated knowledge is stored: as interconnected Markdown files organized as a personal wiki, where every file is traceable to its raw source, carries a full changelog, and can be shared, exported, or queried from any system.\n\n### Core Principles\n\n**Files, not vectors.** The primary storage unit is a human-readable Markdown file — not an opaque embedding. Vectors are derived from files for search purposes, but the file is the source of truth. A person can open, read, edit, and understand their own memory without any tool.\n\n**Wiki, not folders.** Files link to each other by reference. A person page links to the projects they're mentioned in. A project page links to the people, places, and decisions involved. A decision page links to the conversations where it was made. The structure is a graph, not a tree.\n\n**Changelog, not snapshots.** Every file carries a log of every change — what was added, when, and from which conversation or session. The person can see how any piece of knowledge evolved over time. Nothing is silently overwritten.\n\n**Grounded, not hallucinated.** Every fact in a wiki page traces back to raw source data — a conversation transcript, a recording dump, a direct user input. If a file contains \"Berlin project deadline is June,\" there is a traceable link to the exact conversation where that was said. Zero hallucination means zero ungrounded claims.\n\n**Shareable, not locked.** Any file or subset of files can be shared via link, exported as standard Markdown, or made accessible to external AI systems through a retrieval endpoint. The person controls what is shared and what stays private.\n\n**Extractable, not trapped.** The full wiki — or any individual file — can be exported at any time in standard Markdown format. No proprietary encoding, no vendor lock-in. The person owns their memory in a format that outlives any product.\n\n### File Anatomy\n\nEvery Living Memory file contains:\n\n- **Content** — structured M"
+    },
+    {
+      "id": "chunk_059",
+      "source": "zeps/zep-3.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## Epilog\n\nLiving Memory gives Zeus a universal storage format that is human-readable, machine-queryable, version-tracked, source-grounded, and fully portable. Every Zeus domain — Cognitive, Creative, Economic, Physical, Social, Emotional, Temporal — writes to and reads from the same wiki structure, creating one interconnected map of a person's existence.\n\nOpen questions: conflict resolution when multiple systems write to the same page simultaneously, privacy tiers within the wiki (which pages are shareable, which are locked), and retention policies (should any memory ever be automatically pruned, or is permanence the default).\n\n---\n\n*ZEP-3 · Living Memory · April 12, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_060",
+      "source": "zeps/zep-4.md",
+      "topic": "ZEP-4: Pealer",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "physical",
+        "zep",
+        "pealer"
+      ],
+      "text": "# ZEP-4: Pealer\n\n**Status:** Draft · **Date:** April 16, 2026\n**Author:** Eugene Gordeev · **Domain:** Cognitive, Physical\n\n---"
+    },
+    {
+      "id": "chunk_061",
+      "source": "zeps/zep-4.md",
+      "topic": "ZEP-4: Pealer",
+      "keywords": [
+        "zeus",
+        "prolog"
+      ],
+      "text": "## Prolog\n\nEvery day, millions of people with visual impairments, poor eyesight, diabetes-related vision loss, age-related degeneration, or simply glasses navigate digital products designed by people who have never considered them. Every two to three years, product teams redesign interfaces — not to improve function, but to justify their employment. Nothing new is added. Nothing broken is fixed. The layout moves. The buttons change. The user relearns the same product from scratch, again.\n\nFor sighted users, this is an annoyance. For visually impaired users, it is a wall. Every redesign destroys their learned navigation. Every decorative element — splash screens, banners, promotional overlays, CAPTCHAs, cookie dialogs, animated transitions — is an obstacle between them and the result they need.\n\nThe web today is built for designers and managers. It is not built for people.\n\nZeus says: the person wants a result, not an interface. Strip everything else away.\n\n---"
+    },
+    {
+      "id": "chunk_062",
+      "source": "zeps/zep-4.md",
+      "topic": "ZEP-4: Pealer",
+      "keywords": [
+        "protocol",
+        "engine",
+        "story",
+        "pealer",
+        "accessibility",
+        "edge"
+      ],
+      "text": "## Story\n\n**Pealer** is a protocol for AI-driven interface reduction. It defines how an AI agent navigates any digital service on behalf of a person — ignoring all visual presentation, bypassing all obstacles, and delivering only the functional result the person asked for, in the format they prefer.\n\n### Core Mechanism\n\nThe person speaks a command. The AI agent operates a headless browser — a browser with no visual display, no rendering engine for the human eye. The agent navigates the target service programmatically, interacting with the underlying DOM and APIs rather than the visual interface. It extracts the functional result, formats it for the person's preferences (voice, large text, simplified layout, structured data), and delivers it with a single confirmation: **Ok?**\n\nThe visual interface is never shown. The person never sees the website. They see only their result.\n\n### What Pealer Strips\n\n**Advertising.** All promotional content, banners, interstitials, sponsored placements — ignored entirely. The agent does not render, click, or acknowledge ads.\n\n**CAPTCHAs and bot detection.** Pealer operates as a user agent on behalf of an authenticated human. Where CAPTCHAs cannot be bypassed through standard accessibility APIs or authenticated sessions, the agent escalates to the person for a single verification step — then continues.\n\n**Redesigns.** The agent does not depend on visual layout, CSS classes, or pixel positions. It navigates by function — form fields, buttons, links, data structures. When a service redesigns its interface, Pealer continues working because it reads the semantic structure, not the visual surface.\n\n**Cookie dialogs, consent banners, notification prompts.** Automatically dismissed or declined. The person's privacy preferences are applied by default.\n\n**Decorative elements.** Animations, transitions, splash screens, loading indicators, hero images, promotional carousels — none of these are rendered or processed.\n\n**Complexity.** Multi-step f"
+    },
+    {
+      "id": "chunk_063",
+      "source": "zeps/zep-4.md",
+      "topic": "ZEP-4: Pealer",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "engine",
+        "zep",
+        "prolog",
+        "story"
+      ],
+      "text": "### Personalization Layer\n\nPealer adapts its output to the person's Zeus profile:\n\n**Voice-first users** receive spoken results with voice confirmation.\n\n**Large-text users** receive results in their preferred font size, contrast, and color scheme — regardless of how the source service is designed.\n\n**Structured-data users** receive raw results in a machine-readable format for further processing.\n\n**Simplified users** receive results stripped to the absolute minimum — one number, one date, one yes/no.\n\nThe person defines their output preferences once. Pealer applies them everywhere, across every service, permanently.\n\n### Integration with Zeus Protocol\n\n**ZEP-1 (Prolog-Story-Epilog):** Every Pealer interaction carries metadata — what was requested, what was delivered, and what the person might want to do next.\n\n**ZEP-2 (Simple Sync):** Pealer results can be saved to the person's RAG via Simple Sync links. A bank balance check automatically archives itself.\n\n**ZEP-3 (Living Memory):** Pealer interactions feed directly into the person's wiki. Repeated tasks build patterns — the system learns \"my usual groceries,\" \"my bank,\" \"my electricity provider\" from history.\n\n### Accessibility as the Default\n\nPealer is designed for visually impaired users first. But the principle applies universally: every person benefits from an AI that strips interfaces to pure function.\n\nA sighted user stuck in a meeting can voice-command their banking without looking at a screen. An elderly user who never learned modern web interfaces can access any service through a single spoken command.\n\nAccessibility is not a feature. It is the design principle. When you build for the person who cannot see, you build something better for everyone.\n\n### Technical Architecture\n\n**Headless browser engine** — Chromium-based, operating without visual rendering. Navigates via DOM manipulation, form submission, and API interception.\n\n**Semantic navigation layer** — identifies functional elements by their semanti"
+    },
+    {
+      "id": "chunk_064",
+      "source": "zeps/zep-4.md",
+      "topic": "ZEP-4: Pealer",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "zep",
+        "epilog",
+        "pealer"
+      ],
+      "text": "## Epilog\n\nPealer redefines the relationship between people and digital services. Instead of the person adapting to the interface, the interface is dissolved — replaced by a direct line between intent and result.\n\nThe name comes from peeling — stripping the layers of unnecessary complexity that have accumulated on every digital service. What remains after peeling is the fruit: the function the person actually needs.\n\nPeople want results, not obstacles. People want to be happy.\n\nOpen questions: legal framework for AI agents acting on behalf of authenticated users, liability when an agent takes an incorrect action, standardization of service authentication for agent access, and rate limiting policies that may need adaptation for legitimate accessibility agents.\n\n---\n\n*ZEP-4 · Pealer · April 16, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_065",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "temporal",
+        "zep",
+        "memory",
+        "cache"
+      ],
+      "text": "# ZEP-5: Edge Memory Cache\n\n**Status:** Draft · **Date:** April 16, 2026\n**Author:** Eugene Gordeev · **Domain:** Cognitive, Temporal\n\n---"
+    },
+    {
+      "id": "chunk_066",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-3: Living Memory",
+      "keywords": [
+        "zep",
+        "prolog",
+        "memory",
+        "wiki",
+        "edge",
+        "device"
+      ],
+      "text": "## Prolog\n\nZEP-3 (Living Memory) defines how a person's knowledge is stored: as a personal wiki in the cloud — interconnected Markdown files, fully versioned, source-grounded, portable. That wiki grows for a lifetime. It can reach gigabytes of text, millions of cross-links, and dense embedding indices.\n\nA phone cannot hold all of that. A smartwatch cannot hold any of it. A voice-only earpiece has no storage at all. Yet these are the devices people carry every minute of the day — and these are the moments when personal context matters most.\n\nThe cloud is the source of truth. But the cloud is not always reachable, not always fast, and not always private. The person needs their memory on the device in their hand — not all of it, but the right slice, compressed to fit, formatted for the local model, and fresh enough to be useful.\n\nWithout a standard for edge caching, every device either runs without personal context (generic) or requires a permanent cloud connection (fragile, slow, privacy-exposed).\n\n---"
+    },
+    {
+      "id": "chunk_067",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "economic",
+        "physical"
+      ],
+      "text": "## Story\n\n**Edge Memory Cache** defines how a person's cloud-based Living Memory is compressed, tailored, and synchronized to any edge device — so that a local small language model can operate with full personal context, offline, at hardware speed.\n\n### Architecture\n\n**One source of truth.** The full Living Memory wiki lives in the cloud: raw documents, complete embeddings, full wiki-graph, changelogs, session dumps. This is the canonical store defined by ZEP-3. It never moves to the device in full.\n\n**Multiple Edge Memory Caches.** Each device the person owns maintains its own cache — a compressed, optimized subset of the full memory, generated specifically for that device's constraints and use case. A phone gets one cache. A laptop gets a different one. A wearable gets a minimal one. Each is independently generated and independently updated.\n\n**Cache as a derivative, not a copy.** The cache is not a truncated mirror of the cloud. It is a purpose-built artifact — re-ranked, re-embedded, and re-structured for the target device. The generation process decides what to include, what to summarize, what to omit, and how to encode it for the local model.\n\n### Cache Generation Parameters\n\nEvery Edge Memory Cache is generated using these parameters:\n\n**Device constraints** — available memory, CPU/GPU capability, storage budget, battery state. A 4GB phone gets a different cache than a 32GB laptop.\n\n**Target model** — the specific SLM running on the device (Gemma 2B, Phi-3 Mini, Parakeet, Qwen-1.5, etc.). The cache format — embedding dimensions, tokenization, quantization level — matches the model's architecture. No adapter layer needed. The cache is native to the model.\n\n**Modality** — what the device is used for. Voice-only devices (earpieces, smart speakers) get caches weighted toward conversational context, names, recent events, and quick-recall facts. Multimodal devices get richer caches including visual references and document summaries. Text-only devices get dense info"
+    },
+    {
+      "id": "chunk_068",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "domain",
+        "zep",
+        "story",
+        "sync",
+        "memory",
+        "wiki"
+      ],
+      "text": "Caches are small by design — kilobytes to low megabytes. This makes frequent updates practical:\n\n**Delta sync.** Only changes since the last update are transmitted. The cloud tracks which wiki pages changed, generates the relevant cache deltas, and pushes them to the device. Full cache rebuilds happen only when parameters change (new device, new model, changed time horizon).\n\n**Sync frequency.** Configurable per device. A phone might sync every 15 minutes when on Wi-Fi. A wearable might sync hourly. A laptop might sync on every wake. The person sets the cadence. The system respects battery and bandwidth constraints.\n\n**Offline resilience.** The cache is fully functional without a cloud connection. The person loses nothing when they're on a plane, in a tunnel, or in a location without service. The cache was built to be self-sufficient for its time horizon. When connectivity returns, it syncs.\n\n### Cache Format\n\nThe cache contains two layers:\n\n**Structured layer** — a compressed subset of the Living Memory wiki in a standardized format. Key entities (people, projects, events, decisions), their relationships, and their most recent state. Stored as structured data (JSON or MessagePack) that any compliant SLM can parse without additional training.\n\n**Vector layer** — pre-computed embeddings matched to the target model's embedding space. These enable semantic search within the cache — the person asks a question, the local model retrieves relevant context from the cache vectors without calling the cloud.\n\nBoth layers use a standardized container format so that any device, any model, and any implementation can read any compliant cache. The format specification is part of this ZEP and will be published as an open standard.\n\n### Privacy Model\n\nEdge Memory Cache strengthens privacy by design:\n\n**Minimum data principle.** The device holds only what it needs for its specific use case. A voice assistant doesn't need your financial history. A fitness tracker doesn't need your proj"
+    },
+    {
+      "id": "chunk_069",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "sync",
+        "memory",
+        "cache",
+        "device"
+      ],
+      "text": "**Cache expiry.** Caches have a defined TTL (time to live). If a device goes unsynchronized beyond its TTL, the cache self-invalidates. A lost or stolen device doesn't carry a permanent copy of the person's memory.\n\n**Encryption at rest.** The cache is encrypted on the device using a key derived from the person's authentication. Raw cache data is unreadable without the person's credentials.\n\n---"
+    },
+    {
+      "id": "chunk_070",
+      "source": "zeps/zep-5.md",
+      "topic": "ZEP-5: Edge Memory Cache",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "zep",
+        "prolog",
+        "story"
+      ],
+      "text": "## Epilog\n\nEdge Memory Cache solves the last-meter problem of personal AI: your knowledge lives in the cloud, but your life happens on devices. Without edge caching, personal context is either unavailable offline, slow through cloud round-trips, or privacy-exposed through constant API calls.\n\nWith ZEP-5, every device the person owns becomes contextually aware — running a local model that knows who they are, what they're working on, and what matters to them right now. The cloud holds the complete picture. The edge holds exactly what's needed, exactly when it's needed.\n\nThis connects to the full Zeus stack:\n\n- **ZEP-3 (Living Memory)** is the source — the cloud wiki that the cache is derived from\n- **ZEP-2 (Simple Sync)** can trigger cache updates — a save operation in one chat can propagate to edge caches within minutes\n- **ZEP-1 (Prolog-Story-Epilog)** metadata travels with cache entries, so the local model knows the context behind every piece of cached knowledge\n- **ZEP-4 (Pealer)** can operate on-device using the edge cache for authentication and preference data, reducing cloud dependency for routine tasks\n\nOpen questions: standardization of the cache container format across SLM vendors, handling conflicts when the person modifies knowledge on-device while offline (edge writes back to cloud), maximum recommended cache sizes per device category, and governance of which data categories are eligible for edge caching (some data may be too sensitive to ever leave the cloud).\n\n---\n\n*ZEP-5 · Edge Memory Cache · April 16, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_071",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-6: One Life One Chat",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "temporal",
+        "zep",
+        "chat"
+      ],
+      "text": "# ZEP-6: One Life, One Chat\n\n**Status:** Draft · **Date:** April 16, 2026\n**Author:** Eugene Gordeev · **Domain:** Cognitive, Temporal\n\n---"
+    },
+    {
+      "id": "chunk_072",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-6: One Life One Chat",
+      "keywords": [
+        "zeus",
+        "prolog",
+        "memory",
+        "chat",
+        "thread"
+      ],
+      "text": "## Prolog\n\nEvery AI system today forces the same unnatural pattern: start a new chat, re-explain who you are, re-establish context, work for a while, then abandon the conversation and start over. Thousands of chats. Thousands of beginnings. Thousands of orphaned threads that will never be revisited.\n\nThis is not how a person thinks. A person has one continuous stream of consciousness. There are no \"new conversations\" inside a mind. There is one lifelong thread — with tangents, returns, parallel tracks, and deep dives — but always one thread. Every thought connects to every other thought because they all happened to the same person.\n\nThe multi-chat model is a technical limitation masquerading as a feature. Context windows have token limits. Sessions expire. Servers need to free memory. So the industry built a UX around starting fresh — and trained billions of people to accept that their AI forgets them every time they close a tab.\n\nZeus says: one person, one life, one chat. Everything else is an artifact of infrastructure that the person should never have to see.\n\n---"
+    },
+    {
+      "id": "chunk_073",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-6: One Life One Chat",
+      "keywords": [
+        "zep",
+        "story",
+        "memory",
+        "wiki",
+        "cache",
+        "edge"
+      ],
+      "text": "## Story\n\n**One Life, One Chat** defines a single persistent conversation thread model where a person's entire interaction with AI — across all topics, all projects, all moods, all years — happens in one continuous, never-ending chat.\n\n### Core Architecture\n\n**One thread, infinite context.** The chat is not limited to a context window of 128K, 1M, or any fixed number of tokens. The system manages context dynamically — loading relevant history on demand, compressing old exchanges, and maintaining a living index of everything ever said. The person experiences a single conversation that stretches back to the first word they ever spoke to the system.\n\n**No new chats.** There is no \"New Chat\" button. There is no reason for one. When the person wants to talk about something different, they simply say it. The system understands topic shifts, returns to old subjects, and parallel threads — just as a human mind does. Switching from a work project to a grocery list to a philosophical question and back is natural, not a UX problem to be solved with folders.\n\n**Forking, not fragmenting.** When a thought branches — \"let me think about this from a different angle\" — the system creates an internal fork within the same thread. The person can explore the fork, return to the main line, or merge insights back. These are not separate chats. They are branches of one continuous conversation, like a river with tributaries that all flow into the same body.\n\n### Context Management\n\nThe system maintains three layers of context simultaneously:\n\n**Immediate context** — the current exchange, the last few minutes of conversation. Held in full fidelity in the active context window. This is what the person is thinking about right now.\n\n**Session context** — the current day or work session. Key topics, decisions, and open threads from the past hours. Summarized and indexed, expandable on demand. The person can say \"what were we talking about this morning?\" and get a precise answer.\n\n**Lifetime cont"
+    },
+    {
+      "id": "chunk_074",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-1: Prolog-Story-Epilog",
+      "keywords": [
+        "zeus",
+        "zep",
+        "prolog",
+        "story",
+        "epilog",
+        "sync"
+      ],
+      "text": "The person never searches. They ask.\n\n\"What was that idea I had about...\" — the system retrieves it from lifetime context and presents it inline, as if the conversation never paused.\n\n\"Go back to what we were discussing about pricing\" — the system locates the most recent pricing discussion (or asks which one, if there are several) and resumes it with full context.\n\n\"Connect this to the thing I said about neural networks last week\" — the system finds both threads, presents the connection, and lets the person build on it.\n\nThe experience is not \"searching through old chats.\" It is thinking out loud with a partner who remembers everything.\n\n### Integration with Zeus Stack\n\n**ZEP-3 (Living Memory)** is the storage backbone. Every exchange in the One Chat feeds the wiki. Every wiki page is retrievable within the chat. The chat and the wiki are two views of the same knowledge — the chat is the chronological experience, the wiki is the structured map.\n\n**ZEP-5 (Edge Memory Cache)** enables the One Chat to work on any device. The phone carries enough cached context to continue the conversation offline. When connectivity returns, the local exchanges sync back to the cloud and merge into the lifetime thread.\n\n**ZEP-2 (Simple Sync)** allows the One Chat to pull in knowledge from external sources — other AI systems, other people's shared knowledge, external databases — and weave it into the single thread seamlessly.\n\n**ZEP-1 (Prolog-Story-Epilog)** metadata is generated for significant conversation segments automatically. When the person makes a decision, completes a project phase, or reaches a conclusion, the system generates a PSE entry that becomes a permanent, navigable landmark in the lifetime thread.\n\n**ZEP-4 (Pealer)** operates within the One Chat. \"Check my bank balance\" is not a separate app interaction — it's a sentence in the same conversation. The result appears inline. The person's financial data feeds their Living Memory. Everything stays in one place.\n\n### Why On"
+    },
+    {
+      "id": "chunk_075",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-6: One Life One Chat",
+      "keywords": [
+        "zeus",
+        "domain",
+        "cognitive",
+        "temporal",
+        "chat",
+        "thread"
+      ],
+      "text": "**Natural thought flow.** Human consciousness is associative, non-linear, and continuous. One Chat mirrors this. A thought from three years ago can surface naturally in today's conversation because the system maintains the full associative network of everything the person has ever expressed.\n\n**Compounding intelligence.** Every interaction makes the next one better. After a year of One Chat, the system's understanding of the person is orders of magnitude richer than any fresh chat could achieve. After a decade, it is a complete cognitive partner. This is the foundation for Zeus Domain VII (Temporal) — the persistent thread becomes the raw material for the person's post-life model.\n\n---"
+    },
+    {
+      "id": "chunk_076",
+      "source": "zeps/zep-6.md",
+      "topic": "ZEP-6: One Life One Chat",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "almighty",
+        "zep",
+        "story",
+        "epilog"
+      ],
+      "text": "## Epilog\n\nOne Life, One Chat is the interface model that makes Zeus feel like Zeus — not like a tool you pick up and put down, but like an extension of your own mind that is always there, always remembers, and always builds on what came before.\n\nThe current model of disposable chats exists because of technical constraints, not because it serves people. Context windows will grow. Storage will get cheaper. Retrieval will get faster. The constraints that created the multi-chat model are temporary. The human need for continuity is permanent.\n\nOne person. One life. One chat.\n\nOpen questions: managing very long threads in the UI without overwhelming the person (progressive disclosure, collapsible history, landmark navigation), handling multi-person scenarios where the One Chat needs to interact with shared contexts, computational cost of maintaining lifetime retrieval indices, and the psychological implications of an AI that truly never forgets anything the person has said.\n\n---\n\n*ZEP-6 · One Life, One Chat · April 16, 2026*\n*Zeus: The Almighty Protocol*"
+    },
+    {
+      "id": "chunk_077",
+      "source": "zeps/zep-7.md",
+      "topic": "ZEP-7: Mind Sharing",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "social",
+        "temporal",
+        "zep",
+        "mind sharing"
+      ],
+      "text": "# ZEP-7: Mind Sharing\n\n**Status:** Draft · **Date:** April 16, 2026\n**Author:** Eugene Gordeev · **Domain:** Social, Temporal, Cognitive\n\n---"
+    },
+    {
+      "id": "chunk_078",
+      "source": "zeps/zep-7.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "creative",
+        "social",
+        "emotional",
+        "zep",
+        "prolog"
+      ],
+      "text": "## Prolog\n\nEvery breakthrough in human communication has been about reducing the distance between one mind and another. Speech replaced gestures. Writing replaced memory. The printing press replaced hand-copying. The internet replaced geography. Social media replaced gatekeepers.\n\nBut all of these share the same fundamental limitation: they transmit artifacts, not minds. A book is a snapshot of what someone thought, frozen at the moment of writing. A social media post is a curated fragment. A biography is a third-party reconstruction. Even the most intimate conversation only transfers what the person chooses to articulate in that moment.\n\nZeus, through Living Memory (ZEP-3) and One Life, One Chat (ZEP-6), builds a continuously updating, structured model of a person's mind — their knowledge, decisions, creative process, emotional patterns, and evolving understanding of the world. For the first time, the mind itself is a subscribable object — not just its outputs.\n\nThe question is no longer \"what did this person write?\" It is \"what is this person thinking?\"\n\n---"
+    },
+    {
+      "id": "chunk_079",
+      "source": "zeps/zep-7.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## Story\n\n**Mind Sharing** defines a protocol for subscribing to another person's mind — accessing selected layers of their Living Memory in real time or posthumously, with full privacy control by the sharer.\n\n### How It Works\n\nA person decides to share part of their mind. They configure exactly what is visible — which domains, which topics, which depth, which time range. This creates a **Mind Feed**: a live, structured stream derived from their Living Memory wiki.\n\nSubscribers connect to the Mind Feed. They don't see raw data. They see a curated, AI-mediated layer that presents the sharer's thinking in a form the subscriber can absorb — summaries, highlights, patterns, key decisions, creative breakthroughs, open questions.\n\nThe sharer's mind continues to update. The subscriber's feed updates with it. This is not a document. It is a living connection between two minds, mediated by AI.\n\n### Sharing Modes\n\n**Stream** — real-time access to the sharer's current thinking. A researcher shares their Stream while working on a problem. Subscribers see the thought process unfold: hypotheses forming, evidence being weighed, conclusions emerging. Not a finished paper — the actual act of thinking, structured and readable.\n\n**Archive** — access to the sharer's historical mind state. An entrepreneur shares their Archive for the years they built their company. Subscribers can explore the decision-making patterns, the pivots, the mistakes, and the reasoning behind each one — not the polished memoir version, but the real cognitive map.\n\n**Legacy** — posthumous access to the sharer's complete mind model. After death, the person's Living Memory becomes a Legacy Feed that family, colleagues, students, or the public can subscribe to. The Legacy Feed is interactive — subscribers can ask questions, and the AI responds based on the person's accumulated knowledge, judgment, and patterns. This is Domain VII (Temporal) made social.\n\n### Privacy Architecture\n\nThe sharer controls everything. Pri"
+    },
+    {
+      "id": "chunk_080",
+      "source": "zeps/zep-7.md",
+      "topic": "ZEP-7: Mind Sharing",
+      "keywords": [
+        "domain",
+        "cognitive",
+        "creative",
+        "economic",
+        "zep",
+        "memory"
+      ],
+      "text": "**Topic filtering.** Within a shared domain, the sharer can include or exclude specific topics. Share everything about machine learning but nothing about personal health. Share your creative process for music but not for writing. The filter is as fine-grained as the Living Memory wiki structure allows.\n\n**Depth control.** The sharer sets how deep subscribers can see. Three levels:\n\n- **Patterns** — high-level thinking patterns, decision tendencies, creative approaches. No specific details. The subscriber sees how the person thinks, not what about.\n- **Insights** — specific conclusions, decisions, and key ideas with context. The subscriber sees what the person concluded and why.\n- **Full** — complete access to all shared content at the same fidelity as the sharer's own memory. Reserved for trusted subscribers or posthumous legacy access.\n\n**Depersonalization.** The sharer can strip identifying details from their feed. A CEO shares their strategic thinking patterns without revealing which company, which market, which deal. The cognitive structure is visible. The specifics are anonymized. This enables sharing genius without exposing secrets.\n\n**Time gating.** The sharer can delay content. Share your thinking — but only after a 6-month delay. This lets researchers share their process without giving away unpublished work. It lets founders share their strategy after it's been executed, not before.\n\n**Revocation.** The sharer can revoke access to any subscriber, any topic, or any depth level at any time. Revocation is immediate. Cached content on the subscriber's side is invalidated through the Edge Memory Cache (ZEP-5) TTL mechanism.\n\n### Subscription Model\n\n**Free feeds** — the sharer makes their mind available to anyone. Open science. Open creativity. Public thinking.\n\n**Paid feeds** — the sharer charges for access. A world-class investor shares their decision-making patterns for a subscription fee. A master chef shares their creative process. A therapist shares anonymi"
+    },
+    {
+      "id": "chunk_081",
+      "source": "zeps/zep-7.md",
+      "topic": "ZEP-7: Mind Sharing",
+      "keywords": [
+        "zeus",
+        "social",
+        "zep",
+        "prolog",
+        "story",
+        "epilog"
+      ],
+      "text": "**Legacy feeds** — managed by the person's designated executor after death. The person defines, while alive, exactly what becomes available posthumously, to whom, and under what conditions. This is configured through the same privacy architecture — the controls are set before death and honored after.\n\n### Integration with Zeus Stack\n\n**ZEP-3 (Living Memory)** is the data source. Mind Feeds are derived views of the sharer's wiki — not copies, not exports, but live projections filtered through privacy controls.\n\n**ZEP-5 (Edge Memory Cache)** enables subscribers to cache relevant portions of feeds they follow, enabling offline access and fast local retrieval.\n\n**ZEP-2 (Simple Sync)** provides the transport mechanism. A Mind Feed is accessible via a structured URL — subscribing is as simple as clicking a link.\n\n**ZEP-1 (Prolog-Story-Epilog)** metadata enriches every shared item with its origin story and forward guidance, so subscribers understand not just what the person thought but the context that shaped the thought.\n\n**ZEP-6 (One Life, One Chat)** feeds the Mind Share continuously. As the person thinks and speaks in their One Chat, the relevant portions flow into their shared feeds automatically, based on their privacy configuration.\n\n### What Mind Sharing Is Not\n\nIt is not social media. There are no likes, no comments, no algorithmic feeds optimizing for engagement. The connection is between two minds, not two audiences.\n\nIt is not surveillance. The sharer controls every dimension of what is visible. Nothing is shared without explicit configuration. The default is private. Sharing is always opt-in, granular, and revocable.\n\nIt is not telepathy. The subscriber does not experience the sharer's emotions or consciousness. They access a structured, AI-mediated representation of the sharer's knowledge and thinking patterns. The representation is rich — but it is a map, not the territory.\n\n---"
+    },
+    {
+      "id": "chunk_082",
+      "source": "zeps/zep-7.md",
+      "topic": "Seven Domains",
+      "keywords": [
+        "zeus",
+        "protocol",
+        "domain",
+        "cognitive",
+        "creative",
+        "economic"
+      ],
+      "text": "## Epilog\n\nMind Sharing is the social layer of Zeus. Where Living Memory (ZEP-3) gives a person a structured map of their own mind, Mind Sharing lets them open that map — partially or fully, temporarily or permanently — to others.\n\nThe implications span every Zeus domain. Cognitive: learn how the best thinkers actually think. Creative: watch a master's creative process unfold in real time. Economic: subscribe to the decision patterns of successful builders. Social: maintain deep mutual understanding with the people who matter most. Temporal: talk to the dead — not a chatbot wearing their face, but a genuine representation of their accumulated mind.\n\nThis is the proposal that makes Zeus social. One mind, extended. Many minds, connected. Every mind, preserved.\n\nOpen questions: consent framework for posthumous mind access (who decides what's shared after death if the person didn't configure it?), intellectual property rights over shared thinking patterns, the psychological impact of deep mind-level access to another person, preventing manipulation through selective mind sharing (showing only what makes you look good), and the ethics of paid mind access (is it fair that the rich can subscribe to better minds?).\n\n---\n\n*ZEP-7 · Mind Sharing · April 16, 2026*\n*Zeus: The Almighty Protocol*"
+    }
+  ]
+}
